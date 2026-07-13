@@ -1,0 +1,27 @@
+{
+  "name": "ny.gov-alpha-nysds",
+  "version": "1.0.0",
+  "description": "We doin it out here y'all | ny.gov --> NYSDS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "npx @11ty/eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch",
+    "11ty": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OGS-Digital-Service/ny.gov-alpha-nysds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OGS-Digital-Service/ny.gov-alpha-nysds/issues"
+  },
+  "homepage": "https://github.com/OGS-Digital-Service/ny.gov-alpha-nysds#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "tailwindcss": "^3.4.19"
+  }
+}
