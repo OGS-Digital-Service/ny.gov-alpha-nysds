@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{title}}">
+    <meta name="description" content="NYS Digital Service NYgov Alpha Test">
     <meta name="generator" content="11ty/eleventy">    
 <link rel="stylesheet" media="all" href="https:/ny.gov/sites/default/files/css/css_dwNflNkLq_45PKeaCNgRxjumGTqd3lrBAlR4Xj86nm8.css?delta=0&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
 <link rel="stylesheet" media="all" href="https:/ny.gov/sites/default/files/css/css_VVDgwuxY_4SSFN9aU0OwB1bnxnV_4ugs-NsyB8rb8sw.css?delta=1&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
@@ -37,10 +37,16 @@
     }
 </style>
 
-  {% include '_css-link.njk' %}
-  {% include '_nysds.njk' %}
   
-    <title>{{ title }}</title>
+<link href="/css/tailwind.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
+
+  <!-- Load the full NYS Design System CSS. Link should go in head. -->
+<link rel="stylesheet" href="/css/nysds-full.min.css" />
+<!-- Load the NYS Design System JS library. Should go before the closing body tag -->
+<script type="module" src="/js/nysds.js"></script>
+  
+    <title>NYS Digital Service NYgov Alpha Test</title>
   </head>
   <body class="path-frontpage page-node-type-landing-page">
     <header class="nygov-unav" id="ny-universal-navigation" data-once="unavGlobalHandlers">
@@ -164,7 +170,28 @@
                     <div class="t-section -container">
 
 
-                        {{ content | safe }}
+                        
+
+<h1 class="text-2xl text-theme-strong"> NYS Digital Service NYgov Alpha Test </h1>
+
+
+    <nys-textinput
+    name="searchInput"
+    type="search"
+    placeholder="Search"
+    id="searchInput"
+    width="full"
+    errorMessage="This is an error message" 
+    >
+    <nys-button
+        slot="endButton"
+        type="submit"
+        label="Search"
+        prefixIcon="search"
+        id="searchButton"
+    ></nys-button>
+    </nys-textinput>
+
 
 
                     </div>
