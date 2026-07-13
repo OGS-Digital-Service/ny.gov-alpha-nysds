@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "start": "npx @11ty/eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch",
+    "start": "npx @11ty/eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch",
     "11ty": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
@@ -22,6 +22,8 @@
   "homepage": "https://github.com/OGS-Digital-Service/ny.gov-alpha-nysds#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@nysds/components": "^1.19.3",
+    "@nysds/styles": "^1.19.3",
     "tailwindcss": "^3.4.19"
   }
 }

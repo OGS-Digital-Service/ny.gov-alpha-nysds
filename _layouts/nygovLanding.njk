@@ -36,21 +36,312 @@
       --warning-orange: #d4820c;
     }
 </style>
-{# {% include '_js-link.njk' %} #}
+
   {% include '_css-link.njk' %}
+  {% include '_nysds.njk' %}
   
     <title>{{ title }}</title>
   </head>
   <body class="path-frontpage page-node-type-landing-page">
-    <main class="" id="main-site-content-for-skiplink">
-      <article class="node node--type-landing-page node--promoted node--view-mode-full">
-        <article class="p-landing-page -full-page ">
-          <div class="t-section -container">
-            {{ content | safe }}
-          </div>
-        </article>
-      </article>
-    </main>
+    <header class="nygov-unav" id="ny-universal-navigation" data-once="unavGlobalHandlers">
+  <aside class="trustBar__container" aria-labelledby="trustBar-statement">
+  <div class="trustBar__top">
+    <div class="trustBar__top-wrp">
+      <p class="trustBar__top-text" id="trustBar-statement">An official website of New York State</p>
+    </div>
+    <button type="button" class="js-unav__trigger trustBar__topButton" aria-expanded="false" aria-controls="trust-bar-disclosure" data-once="unavExpandableBlocks unavEscapeKey">
+      <span class="trustBar__topButton-text">Here’s how you know</span>
+    </button>
+  </div>
 
+  <div class="trustBar unav-section__container">
+    <div class="trustBar__content" id="trust-bar-disclosure" role="dialog" aria-label="How You Know You're On An Official Website">
+      <div class="trustBar__content-inner">
+        <div class="trustBar__guidance">
+          <span class="trustBar__guidance-icon fas fa-building" aria-hidden="true"></span>
+          <div class="trustBar__guidance-body">
+            <h2>Official websites use ny.gov</h2>
+            <p>A <strong>ny.gov</strong> website belongs to an official New York State government organization.
+            </p>
+          </div>
+        </div>
+        <div class="trustBar__guidance">
+          <span class="trustBar__guidance-icon fas fa-lock" aria-hidden="true"></span>
+          <div class="trustBar__guidance-body">
+            <h2>Secure ny.gov websites use HTTPS</h2>
+            <p>A <strong>lock icon</strong> or <strong>https://</strong> means you’ve safely connected to a ny.gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="js-unav__trigger trustBar__close-button" aria-controls="trust-bar-disclosure" data-once="unavExpandableBlocks">
+        <span class="trustBar__close-button-icon fas fa-xmark" aria-hidden="true"></span>
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+  </div>
+</aside>
+
+   <div class="nygov-unav__header">
+    <div class="nygov-unav__logo">
+      <a href="https://www.ny.gov" rel="home" title="New York State Home" class="nygov-unav__logo-link">
+        <span class="sr-only">New York State Home</span>
+      </a>
+    </div>
+
+    <button type="button" class="js-unav__trigger nygov-unav__button" aria-expanded="false" aria-controls="nygov-unav" data-once="unavExpandableBlocks">
+      <span class="nygov-unav__button-toggle" aria-hidden="true"></span>
+      <span class="sr-only">Main navigation menu</span>
+    </button>
+
+  </div>
+
+  <div class="nygov-unav__nav-content unav-section__container" id="nygov-unav">
+    <div class="nygov-unav__nav-inner">
+
+      <nav aria-label="Main" class="nygov-unav__links">
+              <ul class="o-universalMainMenu__links" data-once="unavFocusOut">
+                      <li class="o-universalMainMenu__link">
+                
+  <a href="/services">Services</a>
+            </li>
+                      <li class="o-universalMainMenu__link">
+                
+  <a href="/programs">Programs</a>
+            </li>
+                      <li class="o-universalMainMenu__link">
+                
+  <a href="/agencies">Government</a>
+            </li>
+                      <li class="o-universalMainMenu__link">
+                
+  <a href="https://governor.ny.gov/news">News</a>
+            </li>
+                  </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="nygov-unav__search -wrapper">
+    <button class="js-unav__trigger nygov-unav__search--trigger" aria-expanded="false" aria-controls="nygov-unav-search" data-once="unavExpandableBlocks">
+      <span class="nygov-unav__search--trigger-icon fas" aria-hidden="true"></span>
+      <span class="sr-only">Search this website, Open Search</span>
+    </button>
+  </div>
+
+  <div class="nygov-search -wrapper unav-section__container">
+    <form action="https://search.ny.gov/search/" method="get" class="nygov-search__form" role="search" name="unav_search">
+      <label class="sr-only" for="nygov-unav-search">Search this website</label>
+      <input class="nygov-search__input" id="nygov-unav-search" placeholder="Search" size="8" type="search" title="Search this website" name="q" enterkeyhint="search" data-once="unavSearchBehavior">
+      <button class="nygov-search__reset-btn" id="nygov-search-reset">
+        <span class="nygov-search__reset-icon fas fa-circle-xmark" aria-hidden="true"></span>
+        <span class="sr-only">Clear search field</span>
+      </button>
+      <button type="submit" class="nygov-search__submit-btn">
+        <span class="nygov-search__submit-icon fa-solid fa-magnifying-glass" aria-hidden="true"></span>
+        <span class="sr-only">Search this website</span>
+      </button>
+      <input type="hidden" name="as_sitesearch" value="www.ny.gov">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="wc" value="200">
+      <input type="hidden" name="wc_mc" value="1">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="ud" value="1">
+    </form>
+  </div>
+</header>
+
+
+<main role="main" lang="en">
+    <a id="main-content" tabindex="-1" data-once="nygovExitModal"></a>
+    <div class="layout-content">
+        <div class="region region-content">
+            <div data-drupal-messages-fallback="" class="hidden"></div>
+
+            <div class="node node--type-landing-page node--promoted node--view-mode-full">
+                <div class="p-landing-page -full-page">
+                    <div class="t-section -container">
+
+
+                        {{ content | safe }}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nygov-back-to-top-wrapper">
+        <a
+            href="#main-content"
+            class="nygov-back-to-top nygov-back-to-top-hidden"
+            data-once="nygovExitModal backToTopButton"
+        >
+            <span class="fa fa-chevron-up" aria-hidden="true"></span>
+            <span class="sr-only">Scroll back to the top of the page</span>
+        </a>
+    </div>
+</main>
+
+
+
+<footer class="footer-navigations">
+        <nav class="o-nygovFooterMenu__wrapper " aria-label="Frequently Visited">
+  <div class="o-nygovFooterMenu__image">
+    <a href="https://www.ny.gov" rel="home" title="New York State Home" class="o-nygovFooterMenu__logo" data-once="nygovExitModal">
+      <span class="sr-only">New York State Home</span>
+    </a>
+  </div>
+
+  <div class="o-nygovFooterMenu__inner">
+    <ul class="o-nygovFooterMenu__links">
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/accessibility" data-once="nygovExitModal">Accessibility</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/agencies" data-once="nygovExitModal">Agencies</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/mobileapps" data-once="nygovExitModal">App Directory</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/counties" data-once="nygovExitModal">Counties</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/website-disclaimer" data-once="nygovExitModal">Disclaimer</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/events" data-once="nygovExitModal">Events</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="https://ogs.ny.gov/office-language-access" data-once="nygovExitModal">Language Access</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/privacy-policy" data-once="nygovExitModal">Privacy Policy</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/programs" data-once="nygovExitModal">Programs</a>
+        </li>
+              <li class="o-nygovFooterMenu__link">
+            
+  <a href="/services" data-once="nygovExitModal">Services</a>
+        </li>
+          </ul>
+
+      </div>
+</nav>
+
+        
+
+                                         
+<div id="footer-translate-section" class="footer-translate">
+  <div class="footer-translate__inner -wrap">
+    <p class="footer-translate__info -mob-only">This page is available in other languages:</p>
+    <button class="js-ft__trigger footer-translate__inner-top--mob-only" aria-expanded="false" aria-controls="footer-translate-links" aria-label="translate this page" data-once="footerLanguageSwitcher">
+      <div class="footer-translate__inner-top-left">
+        <div class="footer-translate__globe-icon">
+          <span class="ft__globe-icon fa-solid fa-globe" aria-hidden="true"></span>
+          <span class="sr-only">Globe icon</span>
+        </div>
+        <span class="footer-translate__tr-copy">Translate</span>
+      </div>
+      <div class="footer-translate__toggle">
+        <span class="ft__caret-icon fa-solid" aria-hidden="true"></span>
+        <span class="sr-only">Arrow icon</span>
+      </div>
+    </button>
+    <div class="footer-translate__inner-top--desk-only">
+      <div class="footer-translate__inner-top-left">
+        <div class="footer-translate__inner-icon">
+          <span class="ft__globe-icon fa-solid fa-globe" aria-hidden="true"></span>
+          <span class="sr-only">Globe icon</span>
+        </div>
+        <a href="https://www.ny.gov/web-translation-services" class="footer-translate__tr-link" data-once="nygovExitModal">Translation Services
+          <span class="sr-only"> Disclaimer</span>
+        </a>
+      </div>
+      <p class="footer-translate__info">This page is available in other languages:</p>
+    </div>
+
+
+    <div class="footer-translate__links-wrp" id="footer-translate-links">
+      <ul class="language-links footer-translate__links">
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="en" class="footer-translate__link" href="https://ny.gov/homepage" data-once="nygovExitModal">English
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="es" class="footer-translate__link" href="https://es.ny.gov/homepage" data-once="nygovExitModal">Español
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="zh" class="footer-translate__link" href="https://zh.ny.gov/homepage" data-once="nygovExitModal">中文
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="zh-HK" class="footer-translate__link" href="https://zh-traditional.ny.gov/homepage" data-once="nygovExitModal">繁體中文
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="ru" class="footer-translate__link" href="https://ru.ny.gov/homepage" data-once="nygovExitModal">Русский
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="yi" class="footer-translate__link" href="https://yi.ny.gov/homepage" data-once="nygovExitModal">יידיש
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="bn" class="footer-translate__link" href="https://bn.ny.gov/homepage" data-once="nygovExitModal">বাংলা
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="ko" class="footer-translate__link" href="https://ko.ny.gov/homepage" data-once="nygovExitModal">한국어
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="ht" class="footer-translate__link" href="https://ht.ny.gov/homepage" data-once="nygovExitModal">Kreyòl Ayisyen
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="it" class="footer-translate__link" href="https://it.ny.gov/homepage" data-once="nygovExitModal">Italiano
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="ar" class="footer-translate__link" href="https://ar.ny.gov/homepage" data-once="nygovExitModal">العربية
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="pl" class="footer-translate__link" href="https://pl.ny.gov/homepage" data-once="nygovExitModal">Polski
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="fr" class="footer-translate__link" href="https://fr.ny.gov/homepage" data-once="nygovExitModal">Français
+          </a>
+        </li>
+                <li class="footer-translate__link-item">
+          <a translate="no" lang="ur" class="footer-translate__link" href="https://ur.ny.gov/homepage" data-once="nygovExitModal">اردو
+          </a>
+        </li>
+              </ul>
+    </div><!--translation-menu-->
+
+    <div class="footer-translate--mob-only">
+      <a href="https://www.ny.gov/web-translation-services" class="footer-translate__tr-link" data-once="nygovExitModal">Translation Services
+        <span class="sr-only"> Disclaimer</span>
+      </a>
+    </div>
+  </div><!--/inner-wrap-->
+</div><!--/footer-translate-->
+  </footer>
   </body>
 </html>
