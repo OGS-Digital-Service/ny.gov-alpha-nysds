@@ -10,3 +10,44 @@ title: NYS Digital Service NYgov Alpha Test
 
     })
 }}
+
+<nys-icon name="check_circle" size="xl" color="var(--nys-color-success)"></nys-icon>
+
+
+
+
+<nys-breadcrumbs>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/tickets">Ticket System</a></li>
+    <li>Current Page</li>
+  </ol>
+</nys-breadcrumbs>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Get all submit buttons within nys-textinput elements
+    const submitButtons = document.querySelectorAll('nys-textinput nys-button[type="submit"]');
+
+    // Add event listeners to each submit button
+    submitButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Get the closest nys-textinput element
+            const inputElement = button.closest('nys-textinput');
+
+            // Check if the input value is empty
+            if (inputElement.value.trim() === '') {
+                // Add showError attribute
+                inputElement.setAttribute('showError', '');
+            } else {
+                // Remove showError attribute
+                inputElement.removeAttribute('showError');
+            }
+        });
+    });
+});
+</script>
