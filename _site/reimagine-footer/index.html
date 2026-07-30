@@ -66,7 +66,7 @@
 
 <footer class="flex bg-theme-strong">
 
-    <section class="m-16 flex lg:flex-row flex-col max-w-[1280px] w-full ">
+    <section class="m-16 flex lg:flex-row flex-col max-w-[1280px] w-full relative z-20">
 
         <div class="flex-col">
             <div class="mb-4"> 
@@ -93,7 +93,7 @@
                 
                     <li class="" x-data="{open1: false}"> 
                         <button class="bg-transparent p-0 md:hidden flex w-full reimagine-footer-accordion hover:!underline focus:outline-2 focus:outline focus:outline-white focus:underline"
-                        x-on:click="open1 = ! open1"
+                        @click="open1 = ! open1"
                         >
                             <h3 class="text-white"> Site Policies</h3> 
                         </button>
@@ -111,7 +111,7 @@
                 
                     <li class="" x-data="{open2: false}"> 
                         <button class="bg-transparent p-0 md:hidden flex w-full reimagine-footer-accordion hover:!underline focus:outline-2 focus:outline focus:outline-white focus:underline"
-                        x-on:click="open2 = ! open2"
+                        @click="open2 = ! open2"
                         >
                             <h3 class="text-white"> Resources</h3> 
                         </button>
@@ -129,7 +129,7 @@
                 
                     <li class="" x-data="{open3: false}"> 
                         <button class="bg-transparent p-0 md:hidden flex w-full reimagine-footer-accordion hover:!underline focus:outline-2 focus:outline focus:outline-white focus:underline"
-                        x-on:click="open3 = ! open3"
+                        @click="open3 = ! open3"
                         >
                             <h3 class="text-white"> Alerts &amp; Support</h3> 
                         </button>
@@ -168,7 +168,7 @@
     </section>
 
 
-    <div class="ny-state-seal  w-3/4 md:w-3/4 lg:w-1/2 h-full absolute right-0 z-10 opacity-10"></div>
+    <div class="ny-state-seal  w-full md:w-3/4 lg:w-1/2 h-full absolute right-0 z-10 opacity-10"></div>
 
 </footer>
     </main>
