@@ -1,0 +1,59 @@
+---
+layout: layout-simple.njk
+title: reimagine footer
+---
+{% from './_includes/_components.njk' import reimagineFooter%}
+
+<div class="flex h-24"></div>
+
+{{
+    reimagineFooter({
+        social:[
+            {
+                title:"Instagram",
+                link:"#"
+            },
+            {
+                title:"X",
+                link:"#"
+            }
+        ],
+        columns:[
+            {
+                col:1,
+                title:"Site Policies",
+                links:[
+                    {
+                        title:"Accessibility",
+                        link:"#"
+                    },
+                    {
+                        title:"Policies",
+                        link:"#"
+                    },
+                    {
+                        title:"Disclaimer",
+                        link:"#"
+                    }
+                ]
+            },
+            {
+                col:2,
+                title:"Resources"
+            },
+            {
+                col:3,
+                title:"Alerts & Support"
+            }
+            
+        ],
+        cta:[
+            {
+                title:"Register to Vote",
+                link:"#",
+                description:"Sign up or download and mail in your application"
+            }
+        ]
+        
+    })
+}}

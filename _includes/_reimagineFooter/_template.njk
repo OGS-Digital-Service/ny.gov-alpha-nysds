@@ -1,0 +1,56 @@
+<footer class="flex bg-theme-strong">
+
+    <section class="m-16 flex flex-row max-w-[1280px] w-full">
+        <div class="flex-col">
+            <div class="mb-4"> {# ny.gov main link title area #}
+                <a class="text-7xl !text-white no-underline hover:underline focus:underline font-extrabold" href="#">ny.gov</a>
+            </div>
+
+            <div class="text-white"> {# social links area #}
+                <ul class="p-0 list-none">
+                    {% for item in params.social %}
+                    <li class="py-2">
+                        <a href="{{item.link}}" class="!text-white no-underline hover:underline focus:underline">{{item.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <nav class="mx-8 flex flex-row w-full">
+            <ul class="p-0 list-none flex flex-row justify-evenly w-full">
+                {% for column in params.columns %}
+                    <li class="px-2"> 
+                        <h3 class="text-white"> {{column.title}}</h3> 
+                        <ul class="p-0 list-none ">
+                            {% for link in column.links %}
+                                <li class="text-white"><a href="" class="!text-white">{{link.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+
+        </nav>
+
+        {%if params.cta %}
+            <div class="w-1/4 flex">
+                {% for cta in params.cta %}
+                <a href="{{cta.link}}">{{cta.title}}</a>
+                <span class="">{{cta.description}}</span>
+                {% endfor %}
+            </div>
+        {%endif%}
+
+    </section>
+
+
+
+
+    <section class="">
+    </section>
+
+
+
+</footer>
