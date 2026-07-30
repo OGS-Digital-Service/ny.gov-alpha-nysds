@@ -1,6 +1,6 @@
 <footer class="flex bg-theme-strong">
 
-    <section class="m-16 flex lg:flex-row flex-col max-w-[1280px] w-full">
+    <section class="m-16 flex lg:flex-row flex-col max-w-[1280px] w-full ">
 
         <div class="flex-col">
             <div class="mb-4"> {# ny.gov main link title area #}
@@ -30,7 +30,7 @@
                         <h3 class="text-white md:block hidden"> {{column.title}}</h3> 
                         <ul class="p-0 list-none md:!block" x-show="open{{loop.index}}" >
                             {% for link in column.links %}
-                                <li class="text-white"><a href="" class="!text-white">{{link.title}}</a></li>
+                                <li class="text-white leading-10"><a href="" class="!text-white">{{link.title}}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
@@ -52,11 +52,6 @@
     </section>
 
 
-
-
-    <section class="">
-    </section>
-
-
+    <div class="ny-state-seal  w-3/4 md:w-3/4 lg:w-1/2 h-full absolute right-0 z-10 opacity-10"></div>
 
 </footer>

@@ -3,7 +3,9 @@ layout: layout-simple.njk
 title: reimagine footer
 ---
 {% from './_includes/_components.njk' import reimagineFooter%}
+
 <style>
+    {% include "./_includes/_reimagineFooter/_reimagineFooter.css" %}
     .reimagine-footer-accordion {
     appearance: none;
     border: 0;
@@ -20,7 +22,8 @@ title: reimagine footer
     display: none !important;
 }
 
-    </style>
+
+</style>
 
 <div class="flex h-24"></div>
 
@@ -77,6 +80,18 @@ title: reimagine footer
                 col:3,
                 title:"Alerts & Support",
                 links:[
+                    {
+                        title:"Accessibility",
+                        link:"#"
+                    },
+                    {
+                        title:"Policies",
+                        link:"#"
+                    },
+                    {
+                        title:"Disclaimer",
+                        link:"#"
+                    },
                     {
                         title:"Accessibility",
                         link:"#"
