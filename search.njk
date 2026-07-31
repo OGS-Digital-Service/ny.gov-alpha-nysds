@@ -1,0 +1,34 @@
+---
+layout: layout-simple.njk
+title: NYS Digital Service Search test
+---
+
+<h1 class="text-2xl ">You searched for <span id="update-this"></span></h1>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current URL
+    const url = new URL(window.location.href);
+
+    // Extract the search parameters
+    const params = Object.fromEntries(new URLSearchParams(url.search));
+
+    // Get the value after 'searchstax[query]'
+    const queryValue = params['searchstax[query]'];
+
+    // Function to decode URL-encoded string and replace underscores with spaces
+    function processQueryString(str) {
+        // First, decode percent-encoding
+        return str.replace(/%([0-9a-f]{2})/gi, (_, hex) => {
+            return String.fromCharCode(parseInt(hex, 16));
+        }).replace(/_/g, ' ');
+    }
+
+    // Process the queryValue to replace underscores and decode percent-encoding
+    const processedQuery = processQueryString(queryValue);
+
+    // Update the span with ID "update-this"
+    document.getElementById('update-this').textContent = processedQuery;
+});
+
+</script>
