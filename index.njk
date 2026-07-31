@@ -1,5 +1,5 @@
 ---
-layout: nygovLanding.njk
+layout: layout-simple.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch%}
@@ -9,29 +9,39 @@ title: NYS Digital Service NYgov Alpha Test
 
 <a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
 
-
+{# 
 {{ nysdsSearch({
 
     })
-}}
+}} #}
+<script>
+    
+{% include "./_includes/_nysdsSearch/_searchstax.js" %}
 
-<nys-icon name="check_circle" size="xl" color="var(--nys-color-success)"></nys-icon>
+</script>
+
+ <form id="nysds-service-search-form">
+                <label for="nys-searchstax-input" class="sr-only">
+                    Search All Services
+                </label>
+                <div class="nysds-search-box">
+                    <input 
+                        id="nys-searchstax-input"
+                        placeholder="Search All Services" 
+                        size="8" 
+                        type="search" 
+                        enterkeyhint="search"
+                    >
+                    <button type="submit" id="nys-searchstax-submit"> 
+                    <span class="sr-only">  Search all state services </span>
+                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
+                    </button>  
+                </div>  
+            </form>
 
 
 
-
-<nys-breadcrumbs>
-  <ol>
-    <li><a href="/">Home</a></li>
-    <li><a href="/services">Services</a></li>
-    <li><a href="/tickets">Ticket System</a></li>
-    <li>Current Page</li>
-  </ol>
-</nys-breadcrumbs>
-
-
-
-
+{# 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
     // Get all submit buttons within nys-textinput elements
@@ -54,4 +64,4 @@ title: NYS Digital Service NYgov Alpha Test
         });
     });
 });
-</script>
+</script> #}

@@ -6,173 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NYS Digital Service NYgov Alpha Test">
     <meta name="generator" content="11ty/eleventy">    
-<link rel="stylesheet" media="all" href="https:/ny.gov/sites/default/files/css/css_dwNflNkLq_45PKeaCNgRxjumGTqd3lrBAlR4Xj86nm8.css?delta=0&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
-<link rel="stylesheet" media="all" href="https:/ny.gov/sites/default/files/css/css_VVDgwuxY_4SSFN9aU0OwB1bnxnV_4ugs-NsyB8rb8sw.css?delta=1&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
-<link rel="stylesheet" media="all" href="https:/ny.gov/profiles/contrib/nygov/themes/custom/nygov-theme/nygov_theme/../storybook/dist/styles.css?thxmxl" />
-<link rel="stylesheet" media="all" href="https:/ny.gov/sites/default/files/css/css_xtO9Zgu_9Vve9L7zfcfwUWHxfLwymaa4gVbxnJ-ek7o.css?delta=3&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
-
-
-<link href="/css/fonts.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-  :root {
-      --primary-core-blue: #154973;
-      --secondary-core-blue: #457AA5;
-      --link-blue: #004DD1;
-      --tertiary-core-blue: #EFF6FB;
-      --quaternary-blue: #007AC2;
-      --core-accent-yellow: #FACE00;
-      --yellow-alert: #FFE396;
-      --black: #000000;
-      --darkest-gray: #242424;
-      --dark-gray: #62666A;
-      --mid-gray: #D0D0CE;
-      --light-gray: #EDEDED;
-      --white: #FFFFFF;
-      --dark-red-alert: #B32E31;
-      --light-red-alert: #FEC3C3;
-      --success-green: #329d08;
-      --warning-orange: #d4820c;
-    }
-</style>
-
-  
+    
 <link href="/css/tailwind.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/normalize.css" rel="stylesheet">
-<script src="//unpkg.com/alpinejs" defer></script>
+<script src="/js/alpine.js" defer></script>
 
-  <!-- Load the full NYS Design System CSS. Link should go in head. -->
-<link rel="stylesheet" href="/css/nysds-full.min.css" />
-<!-- Load the NYS Design System JS library. Should go before the closing body tag -->
-<script type="module" src="/js/nysds.js"></script>
-  
+    <style>
+      body {
+        font-family: 'Proxima Nova';
+      }
+      </style>
+    
     <title>NYS Digital Service NYgov Alpha Test</title>
   </head>
-  <body class="path-frontpage page-node-type-landing-page">
-    <header class="nygov-unav" id="ny-universal-navigation" data-once="unavGlobalHandlers">
-  <aside class="trustBar__container" aria-labelledby="trustBar-statement">
-  <div class="trustBar__top">
-    <div class="trustBar__top-wrp">
-      <p class="trustBar__top-text" id="trustBar-statement">An official website of New York State</p>
-    </div>
-    <button type="button" class="js-unav__trigger trustBar__topButton" aria-expanded="false" aria-controls="trust-bar-disclosure" data-once="unavExpandableBlocks unavEscapeKey">
-      <span class="trustBar__topButton-text">Here’s how you know</span>
-    </button>
-  </div>
+  <body class="">
+  <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
 
-  <div class="trustBar unav-section__container">
-    <div class="trustBar__content" id="trust-bar-disclosure" role="dialog" aria-label="How You Know You're On An Official Website">
-      <div class="trustBar__content-inner">
-        <div class="trustBar__guidance">
-          <span class="trustBar__guidance-icon fas fa-building" aria-hidden="true"></span>
-          <div class="trustBar__guidance-body">
-            <h2>Official websites use ny.gov</h2>
-            <p>A <strong>ny.gov</strong> website belongs to an official New York State government organization.
-            </p>
-          </div>
-        </div>
-        <div class="trustBar__guidance">
-          <span class="trustBar__guidance-icon fas fa-lock" aria-hidden="true"></span>
-          <div class="trustBar__guidance-body">
-            <h2>Secure ny.gov websites use HTTPS</h2>
-            <p>A <strong>lock icon</strong> or <strong>https://</strong> means you’ve safely connected to a ny.gov website. Share sensitive information only on official, secure websites.
-            </p>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="js-unav__trigger trustBar__close-button" aria-controls="trust-bar-disclosure" data-once="unavExpandableBlocks">
-        <span class="trustBar__close-button-icon fas fa-xmark" aria-hidden="true"></span>
-        <span class="sr-only">Close</span>
-      </button>
-    </div>
-  </div>
-</aside>
-
-   <div class="nygov-unav__header">
-    <div class="nygov-unav__logo">
-      <a href="https://www.ny.gov" rel="home" title="New York State Home" class="nygov-unav__logo-link">
-        <span class="sr-only">New York State Home</span>
-      </a>
-    </div>
-
-    <button type="button" class="js-unav__trigger nygov-unav__button" aria-expanded="false" aria-controls="nygov-unav" data-once="unavExpandableBlocks">
-      <span class="nygov-unav__button-toggle" aria-hidden="true"></span>
-      <span class="sr-only">Main navigation menu</span>
-    </button>
-
-  </div>
-
-  <div class="nygov-unav__nav-content unav-section__container" id="nygov-unav">
-    <div class="nygov-unav__nav-inner">
-
-      <nav aria-label="Main" class="nygov-unav__links">
-              <ul class="o-universalMainMenu__links" data-once="unavFocusOut">
-                      <li class="o-universalMainMenu__link">
-                
-  <a href="/services">Services</a>
-            </li>
-                      <li class="o-universalMainMenu__link">
-                
-  <a href="/programs">Programs</a>
-            </li>
-                      <li class="o-universalMainMenu__link">
-                
-  <a href="/agencies">Government</a>
-            </li>
-                      <li class="o-universalMainMenu__link">
-                
-  <a href="https://governor.ny.gov/news">News</a>
-            </li>
-                  </ul>
-      </nav>
-    </div>
-  </div>
-
-  <div class="nygov-unav__search -wrapper">
-    <button class="js-unav__trigger nygov-unav__search--trigger" aria-expanded="false" aria-controls="nygov-unav-search" data-once="unavExpandableBlocks">
-      <span class="nygov-unav__search--trigger-icon fas" aria-hidden="true"></span>
-      <span class="sr-only">Search this website, Open Search</span>
-    </button>
-  </div>
-
-  <div class="nygov-search -wrapper unav-section__container">
-    <form action="https://search.ny.gov/search/" method="get" class="nygov-search__form" role="search" name="unav_search">
-      <label class="sr-only" for="nygov-unav-search">Search this website</label>
-      <input class="nygov-search__input" id="nygov-unav-search" placeholder="Search" size="8" type="search" title="Search this website" name="q" enterkeyhint="search" data-once="unavSearchBehavior">
-      <button class="nygov-search__reset-btn" id="nygov-search-reset">
-        <span class="nygov-search__reset-icon fas fa-circle-xmark" aria-hidden="true"></span>
-        <span class="sr-only">Clear search field</span>
-      </button>
-      <button type="submit" class="nygov-search__submit-btn">
-        <span class="nygov-search__submit-icon fa-solid fa-magnifying-glass" aria-hidden="true"></span>
-        <span class="sr-only">Search this website</span>
-      </button>
-      <input type="hidden" name="as_sitesearch" value="www.ny.gov">
-      <input type="hidden" name="output" value="xml_no_dtd">
-      <input type="hidden" name="wc" value="200">
-      <input type="hidden" name="wc_mc" value="1">
-      <input type="hidden" name="oe" value="UTF-8">
-      <input type="hidden" name="ie" value="UTF-8">
-      <input type="hidden" name="ud" value="1">
-    </form>
-  </div>
-</header>
-
-
-<main role="main" lang="en">
-    <a id="main-content" tabindex="-1" data-once="nygovExitModal"></a>
-    <div class="layout-content">
-        <div class="region region-content">
-            <div data-drupal-messages-fallback="" class="hidden"></div>
-
-            <div class="node node--type-landing-page node--promoted node--view-mode-full">
-                <div class="p-landing-page -full-page">
-                    <div class="t-section -container">
-
-
-                        
+    <main class="" id="main-site-content-for-skiplink">
+    
 
 <h1 class="text-2xl text-theme-strong"> NYS Digital Service NYgov Alpha Test </h1>
 
@@ -180,243 +32,64 @@
 <a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
 
 
-
-    <nys-textinput
-    name="searchInput"
-    type="search"
-    placeholder="Search"
-    id="searchInput"
-    width="full"
-    errorMessage="This is an error message" 
-  
-    >
-    <nys-button
-        slot="endButton"
-        type="submit"
-        label="Search"
-        prefixIcon="search"
-        id="searchButton"
-    ></nys-button>
-    </nys-textinput>
-
-
-<nys-icon name="check_circle" size="xl" color="var(--nys-color-success)"></nys-icon>
-
-
-
-
-<nys-breadcrumbs>
-  <ol>
-    <li><a href="/">Home</a></li>
-    <li><a href="/services">Services</a></li>
-    <li><a href="/tickets">Ticket System</a></li>
-    <li>Current Page</li>
-  </ol>
-</nys-breadcrumbs>
-
-
-
-
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Get all submit buttons within nys-textinput elements
-    const submitButtons = document.querySelectorAll('nys-textinput nys-button[type="submit"]');
+    
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('nys-searchstax-input');
+    const submitSearch = document.getElementById('nysds-service-search-form');
 
-    // Add event listeners to each submit button
-    submitButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Get the closest nys-textinput element
-            const inputElement = button.closest('nys-textinput');
+    function searchServices(e) {
+        e.preventDefault();
+        var searchTerm = searchInput.value;
 
-            // Check if the input value is empty
-            if (inputElement.value.trim() === '') {
-                // Add showError attribute
-                inputElement.setAttribute('showError', '');
-            } else {
-                // Remove showError attribute
-                inputElement.removeAttribute('showError');
-            }
-        });
-    });
+        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
+            window.location.href = "/search";
+        } else {
+            // First replace & with " and ", then encodeURIComponent
+            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
+            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
+
+            // Split the encoded term into parts to handle spaces correctly
+            const parts = encodedSearchTerm.split('+');
+            const properlyEncodedParts = parts.map(part => {
+                if (part.includes('and')) {
+                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
+                }
+                return encodeURIComponent(part);
+            });
+
+            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
+        }
+    }
+
+    submitSearch.addEventListener("submit", searchServices);
 });
+
+
 </script>
 
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nygov-back-to-top-wrapper">
-        <a
-            href="#main-content"
-            class="nygov-back-to-top nygov-back-to-top-hidden"
-            data-once="nygovExitModal backToTopButton"
-        >
-            <span class="fa fa-chevron-up" aria-hidden="true"></span>
-            <span class="sr-only">Scroll back to the top of the page</span>
-        </a>
-    </div>
-</main>
-
-
-
-<footer class="footer-navigations">
-        <nav class="o-nygovFooterMenu__wrapper " aria-label="Frequently Visited">
-  <div class="o-nygovFooterMenu__image">
-    <a href="https://www.ny.gov" rel="home" title="New York State Home" class="o-nygovFooterMenu__logo" data-once="nygovExitModal">
-      <span class="sr-only">New York State Home</span>
-    </a>
-  </div>
-
-  <div class="o-nygovFooterMenu__inner">
-    <ul class="o-nygovFooterMenu__links">
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/accessibility" data-once="nygovExitModal">Accessibility</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/agencies" data-once="nygovExitModal">Agencies</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/mobileapps" data-once="nygovExitModal">App Directory</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/counties" data-once="nygovExitModal">Counties</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/website-disclaimer" data-once="nygovExitModal">Disclaimer</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/events" data-once="nygovExitModal">Events</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="https://ogs.ny.gov/office-language-access" data-once="nygovExitModal">Language Access</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/privacy-policy" data-once="nygovExitModal">Privacy Policy</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/programs" data-once="nygovExitModal">Programs</a>
-        </li>
-              <li class="o-nygovFooterMenu__link">
-            
-  <a href="/services" data-once="nygovExitModal">Services</a>
-        </li>
-          </ul>
-
-      </div>
-</nav>
-
-        
-
-                                         
-<div id="footer-translate-section" class="footer-translate">
-  <div class="footer-translate__inner -wrap">
-    <p class="footer-translate__info -mob-only">This page is available in other languages:</p>
-    <button class="js-ft__trigger footer-translate__inner-top--mob-only" aria-expanded="false" aria-controls="footer-translate-links" aria-label="translate this page" data-once="footerLanguageSwitcher">
-      <div class="footer-translate__inner-top-left">
-        <div class="footer-translate__globe-icon">
-          <span class="ft__globe-icon fa-solid fa-globe" aria-hidden="true"></span>
-          <span class="sr-only">Globe icon</span>
-        </div>
-        <span class="footer-translate__tr-copy">Translate</span>
-      </div>
-      <div class="footer-translate__toggle">
-        <span class="ft__caret-icon fa-solid" aria-hidden="true"></span>
-        <span class="sr-only">Arrow icon</span>
-      </div>
-    </button>
-    <div class="footer-translate__inner-top--desk-only">
-      <div class="footer-translate__inner-top-left">
-        <div class="footer-translate__inner-icon">
-          <span class="ft__globe-icon fa-solid fa-globe" aria-hidden="true"></span>
-          <span class="sr-only">Globe icon</span>
-        </div>
-        <a href="https://www.ny.gov/web-translation-services" class="footer-translate__tr-link" data-once="nygovExitModal">Translation Services
-          <span class="sr-only"> Disclaimer</span>
-        </a>
-      </div>
-      <p class="footer-translate__info">This page is available in other languages:</p>
-    </div>
+ <form id="nysds-service-search-form">
+                <label for="nys-searchstax-input" class="sr-only">
+                    Search All Services
+                </label>
+                <div class="nysds-search-box">
+                    <input 
+                        id="nys-searchstax-input"
+                        placeholder="Search All Services" 
+                        size="8" 
+                        type="search" 
+                        enterkeyhint="search"
+                    >
+                    <button type="submit" id="nys-searchstax-submit"> 
+                    <span class="sr-only">  Search all state services </span>
+                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
+                    </button>  
+                </div>  
+            </form>
 
 
-    <div class="footer-translate__links-wrp" id="footer-translate-links">
-      <ul class="language-links footer-translate__links">
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="en" class="footer-translate__link" href="https://ny.gov/homepage" data-once="nygovExitModal">English
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="es" class="footer-translate__link" href="https://es.ny.gov/homepage" data-once="nygovExitModal">Español
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="zh" class="footer-translate__link" href="https://zh.ny.gov/homepage" data-once="nygovExitModal">中文
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="zh-HK" class="footer-translate__link" href="https://zh-traditional.ny.gov/homepage" data-once="nygovExitModal">繁體中文
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="ru" class="footer-translate__link" href="https://ru.ny.gov/homepage" data-once="nygovExitModal">Русский
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="yi" class="footer-translate__link" href="https://yi.ny.gov/homepage" data-once="nygovExitModal">יידיש
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="bn" class="footer-translate__link" href="https://bn.ny.gov/homepage" data-once="nygovExitModal">বাংলা
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="ko" class="footer-translate__link" href="https://ko.ny.gov/homepage" data-once="nygovExitModal">한국어
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="ht" class="footer-translate__link" href="https://ht.ny.gov/homepage" data-once="nygovExitModal">Kreyòl Ayisyen
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="it" class="footer-translate__link" href="https://it.ny.gov/homepage" data-once="nygovExitModal">Italiano
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="ar" class="footer-translate__link" href="https://ar.ny.gov/homepage" data-once="nygovExitModal">العربية
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="pl" class="footer-translate__link" href="https://pl.ny.gov/homepage" data-once="nygovExitModal">Polski
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="fr" class="footer-translate__link" href="https://fr.ny.gov/homepage" data-once="nygovExitModal">Français
-          </a>
-        </li>
-                <li class="footer-translate__link-item">
-          <a translate="no" lang="ur" class="footer-translate__link" href="https://ur.ny.gov/homepage" data-once="nygovExitModal">اردو
-          </a>
-        </li>
-              </ul>
-    </div><!--translation-menu-->
 
-    <div class="footer-translate--mob-only">
-      <a href="https://www.ny.gov/web-translation-services" class="footer-translate__tr-link" data-once="nygovExitModal">Translation Services
-        <span class="sr-only"> Disclaimer</span>
-      </a>
-    </div>
-  </div><!--/inner-wrap-->
-</div><!--/footer-translate-->
-  </footer>
+
+    </main>
   </body>
 </html>
