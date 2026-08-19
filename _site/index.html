@@ -10,6 +10,7 @@
 <link href="/css/tailwind.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/fontawesome.min.css" rel="stylesheet">
 <script src="/js/alpine.js" defer></script>
 
     <style>
@@ -23,73 +24,99 @@
   <body class="">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
 
-    <main class="" id="main-site-content-for-skiplink">
+    <main class="flex flex-col w-full items-center" 
+          id="main-site-content-for-skiplink" 
+          x-data="{ maxWidth: false }"
     
+    >
+     <button
+    type="button"
+    @click="maxWidth = !maxWidth"
+    class="px-4 py-2 m-4"
+  >
+    Toggle guides that show 1160px width
+  </button>
+      <div class="max-w-[1160px] w-full xl:w-[1160px]" :class="{ 'border-r-2 border-t-0 border-b-0 border-l-2 border-red-500 border-solid': maxWidth }">
+         
 
-<h1 class="text-2xl text-theme-strong"> NYS Digital Service NYgov Alpha Test </h1>
-
-
-<a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
-
-
-<script>
-    
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('nys-searchstax-input');
-    const submitSearch = document.getElementById('nysds-service-search-form');
-
-    function searchServices(e) {
-        e.preventDefault();
-        var searchTerm = searchInput.value;
-
-        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
-            window.location.href = "/search";
-        } else {
-            // First replace & with " and ", then encodeURIComponent
-            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
-            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
-
-            // Split the encoded term into parts to handle spaces correctly
-            const parts = encodedSearchTerm.split('+');
-            const properlyEncodedParts = parts.map(part => {
-                if (part.includes('and')) {
-                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
-                }
-                return encodeURIComponent(part);
-            });
-
-            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
-        }
-    }
-
-    submitSearch.addEventListener("submit", searchServices);
-});
-
-
-</script>
-
- <form id="nysds-service-search-form">
-                <label for="nys-searchstax-input" class="sr-only">
-                    Search All Services
-                </label>
-                <div class="nysds-search-box">
-                    <input 
-                        id="nys-searchstax-input"
-                        placeholder="Search All Services" 
-                        size="8" 
-                        type="search" 
-                        enterkeyhint="search"
-                    >
-                    <button type="submit" id="nys-searchstax-submit"> 
-                    <span class="sr-only">  Search all state services </span>
-                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
-                    </button>  
-                </div>  
-            </form>
+<div class="h-32"></div>
 
 
 
 
+<section class="flex flex-col items-center">
+
+
+    <h2 class="text-[28px] text-center mb-12"> Helpful Guides and Resources</h2>
+
+    <div class="flex gap-6 flex-wrap justify-center">
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
+            aria-labelledby="tile-heading-1"
+            aria-describedby="tile-description-1"
+        >
+            <div class="fa-solid fa-person-breastfeeding text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-1"
+                >
+                New Parent and Early Childhood 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-1"
+                >
+                Whether you’re expecting a child or caring for a newborn, you can find resources and services to help your family thrive.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
+            aria-labelledby="tile-heading-2"
+            aria-describedby="tile-description-2"
+        >
+            <div class="fa-solid fa-people-carry-box text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-2"
+                >
+                Moving to New York State 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-2"
+                >
+                Are you ready to make New York State your home? Here’s information to help make the move easier, including regional highlights, jobs, housing, education and more.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
+            aria-labelledby="tile-heading-3"
+            aria-describedby="tile-description-3"
+        >
+            <div class="fa-solid fa-sign-hanging text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-3"
+                >
+                Buying a Home 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-3"
+                >
+                Buying a home is one of the biggest financial decisions you&#39;ll make. Take time to understand what you can afford, research the property, and learn more about homeownership.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+    </div>
+
+
+
+</section>
+
+
+
+        </div>
     </main>
   </body>
 </html>

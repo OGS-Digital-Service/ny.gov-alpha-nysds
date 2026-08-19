@@ -1,67 +1,55 @@
 ---
-layout: layout-simple.njk
+layout: reimagine.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
-{% from './_includes/_components.njk' import nysdsSearch%}
+{% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
 
-<h1 class="text-2xl text-theme-strong"> {{title}} </h1>
+<div class="h-32"></div>
 
 
-<a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
-
-{# 
-{{ nysdsSearch({
-
-    })
-}} #}
-<script>
+{{ hero({
+    title: "",
+    headline:"",
+    searchDescription:"",
+    images: [
     
-{% include "./_includes/_nysdsSearch/_searchstax.js" %}
+    ]
+    })
+}}
 
-</script>
+{{ accomplishments({
+    title: "Helpful Guides and Resources",
+    description:"",
+    tiles: [
+        {
+            icon:"fa-solid fa-person-breastfeeding",
+            title:"New Parent and Early Childhood",
+            text:"Whether you’re expecting a child or caring for a newborn, you can find resources and services to help your family thrive.",
+            link:"#"
+        },
+        {
+            icon:"fa-solid fa-people-carry-box",
+            title:"Moving to New York State",
+            text:"Are you ready to make New York State your home? Here’s information to help make the move easier, including regional highlights, jobs, housing, education and more.",
+            link:"#"
+        },
+        {
+            icon:"fa-solid fa-sign-hanging",
+            title:"Buying a Home",
+            text:"Buying a home is one of the biggest financial decisions you'll make. Take time to understand what you can afford, research the property, and learn more about homeownership.",
+            link:"#"
+        }
+    
+    ]
+    })
+}}
 
- <form id="nysds-service-search-form">
-                <label for="nys-searchstax-input" class="sr-only">
-                    Search All Services
-                </label>
-                <div class="nysds-search-box">
-                    <input 
-                        id="nys-searchstax-input"
-                        placeholder="Search All Services" 
-                        size="8" 
-                        type="search" 
-                        enterkeyhint="search"
-                    >
-                    <button type="submit" id="nys-searchstax-submit"> 
-                    <span class="sr-only">  Search all state services </span>
-                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
-                    </button>  
-                </div>  
-            </form>
 
-
-
-{# 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Get all submit buttons within nys-textinput elements
-    const submitButtons = document.querySelectorAll('nys-textinput nys-button[type="submit"]');
-
-    // Add event listeners to each submit button
-    submitButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Get the closest nys-textinput element
-            const inputElement = button.closest('nys-textinput');
-
-            // Check if the input value is empty
-            if (inputElement.value.trim() === '') {
-                // Add showError attribute
-                inputElement.setAttribute('showError', '');
-            } else {
-                // Remove showError attribute
-                inputElement.removeAttribute('showError');
-            }
-        });
-    });
-});
-</script> #}
+{{ imageFull({
+    title: "",
+    description:"",
+    image:"",
+    headline:"",
+    date:""
+    })
+}}
