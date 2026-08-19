@@ -1,8 +1,10 @@
 ---
-layout: layout-simple.njk
+layout: reimagine.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
+
+<div class="h-32"></div>
 
 
 {{ hero({
@@ -15,17 +17,27 @@ title: NYS Digital Service NYgov Alpha Test
     })
 }}
 
-
-
 {{ accomplishments({
-    title: "",
+    title: "Helpful Guides and Resources",
     description:"",
     tiles: [
         {
-            icon:"",
-            title:"",
-            text:"",
-            link:""
+            icon:"fa-solid fa-person-breastfeeding",
+            title:"New Parent and Early Childhood",
+            text:"Whether you’re expecting a child or caring for a newborn, you can find resources and services to help your family thrive.",
+            link:"#"
+        },
+        {
+            icon:"fa-solid fa-people-carry-box",
+            title:"Moving to New York State",
+            text:"Are you ready to make New York State your home? Here’s information to help make the move easier, including regional highlights, jobs, housing, education and more.",
+            link:"#"
+        },
+        {
+            icon:"fa-solid fa-sign-hanging",
+            title:"Buying a Home",
+            text:"Buying a home is one of the biggest financial decisions you'll make. Take time to understand what you can afford, research the property, and learn more about homeownership.",
+            link:"#"
         }
     
     ]

@@ -1,0 +1,31 @@
+<section class="flex flex-col items-center">
+
+
+    <h2 class="text-[28px]"> {{params.title}}</h2>
+
+    <div class="flex">
+        {% for tile in params.tiles %}
+        <a  href="{{tile.link}}" 
+            class="no-underline text-black group"
+            aria-labelledby="tile-heading-{{loop.index}}"
+            aria-describedby="tile-description-{{loop.index}}"
+        >
+            <div class="{{tile.icon}} block h-16 w-16 text-blue-600" aria-hidden="true"></div>
+            <h3 class="text-theme-default group-focus-within:underline group-hover:underline" 
+                id="tile-heading-{{loop.index}}"
+                >
+                {{tile.title}} 
+            </h3>
+            <p class=""
+                id="tile-description-{{loop.index}}"
+                >
+                {{tile.text}}
+            </p>
+            <div class="fa-solid fa-arrow-right" aria-hidden="true"></div>
+        </a>
+        {% endfor %}
+    </div>
+
+
+
+</section>
