@@ -6,7 +6,7 @@
     <div class="flex gap-6 flex-wrap justify-center">
         {% for tile in params.tiles %}
         <a  href="{{tile.link}}" 
-            class="flex flex-col no-underline group border border-solid border-neutral-200  focus:outline focus:outline-2 focus:outline-neutral-900 hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
+            class="flex flex-col no-underline group border border-solid border-neutral-200  focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
             aria-labelledby="tile-heading-{{loop.index}}"
             aria-describedby="tile-description-{{loop.index}}"
         >
@@ -21,7 +21,7 @@
                 >
                 {{tile.text}}
             </p>
-            <div class="fa-solid fa-arrow-right text-theme-mid text-[30px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
         </a>
         {% endfor %}
     </div>
