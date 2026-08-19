@@ -1,27 +1,27 @@
 <section class="flex flex-col items-center">
 
 
-    <h2 class="text-[28px]"> {{params.title}}</h2>
+    <h2 class="text-[28px] text-center mb-12"> {{params.title}}</h2>
 
-    <div class="flex">
+    <div class="flex gap-6 flex-wrap justify-center">
         {% for tile in params.tiles %}
         <a  href="{{tile.link}}" 
-            class="no-underline text-black group"
+            class="flex flex-col no-underline group border border-solid border-neutral-200  focus:outline focus:outline-2 focus:outline-neutral-900 hover:outline hover:outline-2 hover:outline-neutral-900 rounded-lg p-8 w-4/5 sm:w-[300px] sm:h-[300px]"
             aria-labelledby="tile-heading-{{loop.index}}"
             aria-describedby="tile-description-{{loop.index}}"
         >
-            <div class="{{tile.icon}} block h-16 w-16 text-blue-600" aria-hidden="true"></div>
-            <h3 class="text-theme-default group-focus-within:underline group-hover:underline" 
+            <div class="{{tile.icon}} text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
                 id="tile-heading-{{loop.index}}"
                 >
                 {{tile.title}} 
             </h3>
-            <p class=""
+            <p class="text-black text-[18px] leading-lg mt-0"
                 id="tile-description-{{loop.index}}"
                 >
                 {{tile.text}}
             </p>
-            <div class="fa-solid fa-arrow-right" aria-hidden="true"></div>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[30px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
         </a>
         {% endfor %}
     </div>
