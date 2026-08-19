@@ -2,66 +2,42 @@
 layout: layout-simple.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
-{% from './_includes/_components.njk' import nysdsSearch%}
-
-<h1 class="text-2xl text-theme-strong"> {{title}} </h1>
+{% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
 
 
-<a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
-
-{# 
-{{ nysdsSearch({
-
-    })
-}} #}
-<script>
+{{ hero({
+    title: "",
+    headline:"",
+    searchDescription:"",
+    images: [
     
-{% include "./_includes/_nysdsSearch/_searchstax.js" %}
-
-</script>
-
- <form id="nysds-service-search-form">
-                <label for="nys-searchstax-input" class="sr-only">
-                    Search All Services
-                </label>
-                <div class="nysds-search-box">
-                    <input 
-                        id="nys-searchstax-input"
-                        placeholder="Search All Services" 
-                        size="8" 
-                        type="search" 
-                        enterkeyhint="search"
-                    >
-                    <button type="submit" id="nys-searchstax-submit"> 
-                    <span class="sr-only">  Search all state services </span>
-                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
-                    </button>  
-                </div>  
-            </form>
+    ]
+    })
+}}
 
 
 
-{# 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Get all submit buttons within nys-textinput elements
-    const submitButtons = document.querySelectorAll('nys-textinput nys-button[type="submit"]');
+{{ accomplishments({
+    title: "",
+    description:"",
+    tiles: [
+        {
+            icon:"",
+            title:"",
+            text:"",
+            link:""
+        }
+    
+    ]
+    })
+}}
 
-    // Add event listeners to each submit button
-    submitButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Get the closest nys-textinput element
-            const inputElement = button.closest('nys-textinput');
 
-            // Check if the input value is empty
-            if (inputElement.value.trim() === '') {
-                // Add showError attribute
-                inputElement.setAttribute('showError', '');
-            } else {
-                // Remove showError attribute
-                inputElement.removeAttribute('showError');
-            }
-        });
-    });
-});
-</script> #}
+{{ imageFull({
+    title: "",
+    description:"",
+    image:"",
+    headline:"",
+    date:""
+    })
+}}

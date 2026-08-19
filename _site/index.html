@@ -26,66 +26,11 @@
     <main class="" id="main-site-content-for-skiplink">
     
 
-<h1 class="text-2xl text-theme-strong"> NYS Digital Service NYgov Alpha Test </h1>
 
 
-<a href="/reimagine-footer"> Reimagine footer css positioning demo </a>
 
 
-<script>
-    
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('nys-searchstax-input');
-    const submitSearch = document.getElementById('nysds-service-search-form');
 
-    function searchServices(e) {
-        e.preventDefault();
-        var searchTerm = searchInput.value;
-
-        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
-            window.location.href = "/search";
-        } else {
-            // First replace & with " and ", then encodeURIComponent
-            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
-            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
-
-            // Split the encoded term into parts to handle spaces correctly
-            const parts = encodedSearchTerm.split('+');
-            const properlyEncodedParts = parts.map(part => {
-                if (part.includes('and')) {
-                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
-                }
-                return encodeURIComponent(part);
-            });
-
-            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
-        }
-    }
-
-    submitSearch.addEventListener("submit", searchServices);
-});
-
-
-</script>
-
- <form id="nysds-service-search-form">
-                <label for="nys-searchstax-input" class="sr-only">
-                    Search All Services
-                </label>
-                <div class="nysds-search-box">
-                    <input 
-                        id="nys-searchstax-input"
-                        placeholder="Search All Services" 
-                        size="8" 
-                        type="search" 
-                        enterkeyhint="search"
-                    >
-                    <button type="submit" id="nys-searchstax-submit"> 
-                    <span class="sr-only">  Search all state services </span>
-                        <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
-                    </button>  
-                </div>  
-            </form>
 
 
 
