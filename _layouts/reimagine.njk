@@ -23,14 +23,14 @@
           x-data="{ maxWidth: false }"
     
     >
-     <button
+     {# <button
     type="button"
     @click="maxWidth = !maxWidth"
     class="px-4 py-2 m-4"
   >
-    Toggle guides that show 1160px width
-  </button>
-      <div class="max-w-[1160px] w-full xl:w-[1160px]" :class="{ 'border-r-2 border-t-0 border-b-0 border-l-2 border-red-500 border-solid': maxWidth }">
+    Toggle guides that show 1160px width :class="{ 'border-r-2 border-t-0 border-b-0 border-l-2 border-red-500 border-solid': maxWidth }"
+  </button> #}
+      <div class="w-full" >
          {{ content | safe }}
         </div>
     </main>
