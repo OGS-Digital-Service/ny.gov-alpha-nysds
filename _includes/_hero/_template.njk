@@ -1,0 +1,33 @@
+
+<section class="flex flex-col items-center lg:flex-row gap-10 max-w-[1160px] p-6 md:p-12">
+    {# Left Column with Hero Title & Search Bar #}
+   <div class="flex flex-col lg:w-[55%] items-center justify-center text-center gap-6 ">
+    <h1 class="mb-5 font-bold text-theme-strong">
+        <span class="block mb-3 font-normal text-theme text-sm tracking-[0.5rem] uppercase"> Welcome To </span> New York State
+    </h1>
+
+<fieldset class="border-none flex max-width-[1160px] w-full m-0 p-0 rounded overflow-hidden bg-white relative">
+    <legend class="w-full mb-7 flex font-semibold text-theme md:text-[1.05rem]">Explore the programs, services, and resources available in New York State.</legend>
+  <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
+
+     <input
+         type="search"
+         id="ny-hero-search-input"
+        name="searchButton"
+         class="w-md md:w-full px-4 py-3.5 focus:outline-2 focus:outline-theme focus:border-theme"
+         placeholder="Search NY.gov"
+         aria-label="Search.NY.gov"/>
+    <button class="ny-clear-input is-visible" id="ny-hero-search-clear" type="button" aria-label="Clear search input">
+        <i class="fa-solid fa-times"></i>
+    </button>
+    <button type="submit" class="absolute right-0 top-0 bottom-0 px-4 py-3.5 bg-theme-mid text-white hover:text-theme-strong focus:text-theme-strong">Search
+    <i class="fa-solid fa-magnifying-glass"></i>
+     </button>
+        </fieldset>
+    </div>
+    {# Right Column with image placement #}
+    <div class="flex flex-col lg:w-[45%] w-full">
+       <img src="{{params.image}}" alt="{{params.alt}}" class="md:w-full lg:w-[500px] md:h-[320px] lg:h-[400px] h-72 object-cover rounded-xl"/>
+            <span class="text-xs text-gray-500 mt-3 block w-full text-right"> {{params.caption}} </span>
+    </div> 
+</section>
