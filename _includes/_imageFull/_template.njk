@@ -1,14 +1,13 @@
  <section class="md:relative" > <!-- using a background image -->
 
-    <div class="flex bg-[url('/img/{{params.image}}')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
+    <div class="flex bg-[url('{{params.image}}')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
     </div> <!--image -->
 
     <div class=" 
                 md:absolute  right-0 
                 flex flex-col 
-                md:w-1/3 xl:w-1/4 
-                md:max-w-[350px] 
-                md:
+                
+                md:w-[400px] 
                 md:border md:border-solid md:border-neutral-200 md:rounded-lg 
                 p-8 md:p-8  md:mx-12
                 md:inset-y-0 md:my-auto md:h-fit
@@ -16,7 +15,7 @@
                "    
                 
                 > <!-- card with details -->
-        <div class=""><img src="/img/{{params.icon}}" class="w-24" alt="I love NY logo"/></div>
+        <div class=""><img src="{{params.icon}}" class="w-24" alt="I love NY logo"/></div>
 
         <h2 class="text-[20px]">{{params.title}}</h2>
 
