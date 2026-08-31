@@ -4,9 +4,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{title}}">
+    <meta name="description" content="NYS Digital Service NYgov Alpha Test">
     <meta name="generator" content="11ty/eleventy">  
-     {% include '_css-link.njk' %}
+     
+<link href="/css/tailwind.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/fontawesome.min.css" rel="stylesheet">
+<script src="/js/alpine.js" defer></script>
+
  
  <link rel="stylesheet" media="all" href="https://ny.gov/sites/default/files/css/css_epwu2GhLHDtRr8t1ijCxCpjOEsIyqEiUBVrG6FmsqCg.css?delta=0&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
 <link rel="stylesheet" media="all" href="https://ny.gov/sites/default/files/css/css_6J0CJxMavIf3F3h66G1kdlmnyFV__nC42fgr3Bdzhgk.css?delta=1&amp;language=en&amp;theme=nygov_theme&amp;include=eJxVjUEOAiEQBD-Ey5PMLHRGzMAYml3F15vIaS-VSl0qmZAz7kKEtLyCFAVD8o6Y-_ES2-Qpn0vIRcx1pea9ipUvQpvq5308UBHVfBe7cUwrTQMnB-o6nQVvxj-36vkw_AAECjSn" />
@@ -42,7 +48,7 @@
 
  
   
-    <title>{{ title }}</title>
+    <title>NYS Digital Service NYgov Alpha Test</title>
   </head>
   <body class="path-frontpage page-node-type-landing-page">
     <header class="nygov-unav" id="ny-universal-navigation" data-once="unavGlobalHandlers">
@@ -170,7 +176,174 @@
   <div class="o-embedded-code__content-wrapper">
         <div class="o-embedded-code__content">
 
-                        {{ content | safe }}
+                        
+
+<div class="h-32"></div>
+
+
+
+<section class="flex flex-col items-center lg:flex-row gap-10 max-w-[1160px] p-6 md:p-12">
+    
+   <div class="flex flex-col lg:w-[55%] items-center justify-center text-center gap-6 ">
+    <h1 class="mb-5 font-bold text-theme-strong">
+        <span class="block mb-3 font-normal text-theme text-sm tracking-[0.5rem] uppercase"> Welcome To </span> New York State
+    </h1>
+
+<fieldset class="border-none flex max-width-[1160px] w-full m-0 p-0 rounded overflow-hidden bg-white relative">
+    <legend class="w-full mb-7 flex font-semibold text-theme md:text-[1.05rem]">Explore the programs, services, and resources available in New York State.</legend>
+  <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
+
+     <input
+         type="search"
+         id="ny-hero-search-input"
+        name="searchButton"
+         class="w-md md:w-full px-4 py-3.5 focus:outline-2 focus:outline-theme focus:border-theme"
+         placeholder="Search NY.gov"
+         aria-label="Search.NY.gov"/>
+    <button class="ny-clear-input is-visible" id="ny-hero-search-clear" type="button" aria-label="Clear search input">
+        <i class="fa-solid fa-times"></i>
+    </button>
+    <button type="submit" class="absolute right-0 top-0 bottom-0 px-4 py-3.5 bg-theme-mid text-white hover:text-theme-strong focus:text-theme-strong">Search
+    <i class="fa-solid fa-magnifying-glass"></i>
+     </button>
+        </fieldset>
+    </div>
+    
+    <div class="flex flex-col lg:w-[45%] w-full">
+       <img src="/img/nysfair.jpeg" alt="New York State Fair (Syracuse, NY) © I Love NY" class="md:w-full lg:w-[500px] md:h-[320px] lg:h-[400px] h-72 object-cover rounded-xl"/>
+            <span class="text-xs text-gray-500 mt-3 block w-full text-right"> New York State Fair (Syracuse, NY) © I Love NY </span>
+    </div> 
+</section>
+
+
+<section class="flex flex-col items-center max-w-[1160px] mx-auto">
+
+
+    <h2 class="text-[28px] text-center mb-[38px] mx-4"> Helpful Guides and Resources</h2>
+
+    <div class="flex flex-wrap sm:justify-center md:gap-4 lg:gap-6 xl:gap-0 xl:justify-between  w-full">
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  
+            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 w-3/4 
+            sm:w-[350px]
+            "
+
+            aria-labelledby="tile-heading-1"
+            aria-describedby="tile-description-1"
+        >
+            <div class="fa-solid fa-person-breastfeeding text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-1"
+                >
+                New Parent and Early Childhood 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-1"
+                >
+                Whether you’re expecting a child or caring for a newborn, you can find resources and services to help your family thrive.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  
+            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 w-3/4 
+            sm:w-[350px]
+            "
+
+            aria-labelledby="tile-heading-2"
+            aria-describedby="tile-description-2"
+        >
+            <div class="fa-solid fa-people-carry-box text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-2"
+                >
+                Moving to New York State 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-2"
+                >
+                Are you ready to make New York State your home? Here’s information to help make the move easier, including regional highlights, jobs, housing, education and more.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+        <a  href="#" 
+            class="flex flex-col no-underline group border border-solid border-neutral-200  
+            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 w-3/4 
+            sm:w-[350px]
+            "
+
+            aria-labelledby="tile-heading-3"
+            aria-describedby="tile-description-3"
+        >
+            <div class="fa-solid fa-sign-hanging text-[40px] text-theme-mid group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+            <h3 class="text-theme text-[20px] group-focus-within:underline group-hover:underline" 
+                id="tile-heading-3"
+                >
+                Buying a Home 
+            </h3>
+            <p class="text-black text-[18px] leading-lg mt-0"
+                id="tile-description-3"
+                >
+                Buying a home is one of the biggest financial decisions you&#39;ll make. Take time to understand what you can afford, research the property, and learn more about homeownership.
+            </p>
+            <div class="fa-solid fa-arrow-right text-theme-mid text-[20px] mt-auto group-hover:text-theme group-focus:text-theme" aria-hidden="true"></div>
+        </a>
+        
+    </div>
+
+
+
+</section>
+
+<div class="h-32"></div>
+
+ <section class="md:relative" > <!-- using a background image -->
+
+    <div class="flex bg-[url('thatcher-from-iloveny.avif')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
+    </div> <!--image -->
+
+    <div class=" 
+                md:absolute  right-0 
+                flex flex-col 
+                
+                md:w-[400px] 
+                md:border md:border-solid md:border-neutral-200 md:rounded-lg 
+                p-8 md:p-8  md:mx-12
+                md:inset-y-0 md:my-auto md:h-fit
+                bg-theme-weak md:bg-white 
+               "    
+                
+                > <!-- card with details -->
+        <div class=""><img src="iloveNY.png" class="w-24" alt="I love NY logo"/></div>
+
+        <h2 class="text-[20px]">Discover New York</h2>
+
+        <p class="text-black leading-md mt-0">Many of New York State’s world- class attractions are accessible to and offer specialty programming for travelers with accessible walkways above the Adirondack forest treetops at the Wild Center.</p>
+
+        <div class="flex flex-col">
+            
+            <a href="#" class="flex group text-link no-underline w-fit mb-2">
+                <span class="group-hover:underline group-focus:underline">An example first link </span>
+                <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
+                </a>
+            
+            <a href="#" class="flex group text-link no-underline w-fit mb-2">
+                <span class="group-hover:underline group-focus:underline">Visit NY </span>
+                <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
+                </a>
+            
+        </div>
+    </div><!-- end card with details -->
+
+</section>
+
+<div class="h-32"></div>
 </div></div></div></div>
 
                     </div>
