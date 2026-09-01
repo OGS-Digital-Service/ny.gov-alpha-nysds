@@ -4,7 +4,7 @@ title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
 
-{# {{ accomplishments({
+{{ accomplishments({
     title: "Helpful Guides and Resources",
     description:"",
     tiles: [
@@ -29,14 +29,14 @@ title: NYS Digital Service NYgov Alpha Test
     
     ]
     })
-}} #}
+}}
 
 
-<style>
+{# <style>
     {% include './css/tailwind.css' %}
-    </style>
+    </style> #}
 
-
+{# 
 {{ hero({
     title: "",
     headline:"",
@@ -45,4 +45,4 @@ title: NYS Digital Service NYgov Alpha Test
     caption:"New York State Fair (Syracuse, NY) © I Love NY",
     alt:"New York State Fair (Syracuse, NY) © I Love NY"
     })
-}}
+}} #}
