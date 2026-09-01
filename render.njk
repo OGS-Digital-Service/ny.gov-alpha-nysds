@@ -4,7 +4,7 @@ title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
 
-{{ accomplishments({
+{# {{ accomplishments({
     title: "Helpful Guides and Resources",
     description:"",
     tiles: [
@@ -29,7 +29,7 @@ title: NYS Digital Service NYgov Alpha Test
     
     ]
     })
-}}
+}} #}
 
 
 {# <style>
@@ -46,3 +46,23 @@ title: NYS Digital Service NYgov Alpha Test
     alt:"New York State Fair (Syracuse, NY) © I Love NY"
     })
 }} #}
+
+{{ imageFull({
+    icon:"https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-09/ilovenylogo.png",
+    title: "Discover New York",
+    description:"Many of New York State’s world- class attractions are accessible to and offer specialty programming for travelers with accessible walkways above the Adirondack forest treetops at the Wild Center.",
+    image:"https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-08/thatcher-from-iloveny.jpg",
+    alt:"a wonderful description",
+    links: [
+        {
+            text:"An example first link",
+            url:"#"
+        },
+        {
+            text:"Visit NY",
+            url:"#"
+        }
+    ]
+    
+    })
+}}
