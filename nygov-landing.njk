@@ -1,8 +1,21 @@
 ---
-layout: render.njk
+layout: nygovLanding.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
+
+<div class="h-32"></div>
+
+
+{{ hero({
+    title: "",
+    headline:"",
+    searchDescription:"",
+    image:"/img/nysfair.jpeg",
+    caption:"New York State Fair (Syracuse, NY) © I Love NY",
+    alt:"New York State Fair (Syracuse, NY) © I Love NY"
+    })
+}}
 
 {{ accomplishments({
     title: "Helpful Guides and Resources",
@@ -31,18 +44,26 @@ title: NYS Digital Service NYgov Alpha Test
     })
 }}
 
+<div class="h-32"></div>
 
-{# <style>
-    {% include './css/tailwind.css' %}
-    </style> #}
-
-{# 
-{{ hero({
-    title: "",
-    headline:"",
-    searchDescription:"",
-    image:"statefair_ride_hero.jpg",
-    caption:"New York State Fair (Syracuse, NY) © I Love NY",
-    alt:"New York State Fair (Syracuse, NY) © I Love NY"
+{{ imageFull({
+    icon:"iloveNY.png",
+    title: "Discover New York",
+    description:"Many of New York State’s world- class attractions are accessible to and offer specialty programming for travelers with accessible walkways above the Adirondack forest treetops at the Wild Center.",
+    image:"thatcher-from-iloveny.avif",
+    alt:"a wonderful description",
+    links: [
+        {
+            text:"An example first link",
+            url:"#"
+        },
+        {
+            text:"Visit NY",
+            url:"#"
+        }
+    ]
+    
     })
-}} #}
+}}
+
+<div class="h-32"></div>
