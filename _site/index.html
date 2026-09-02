@@ -36,100 +36,26 @@
 <div class="h-32"></div>
 
 
- 
-<section class="flex flex-col items-center lg:flex-row gap-10 max-w-[1160px] w-full mx-auto p-6 md:p-12">
-    
-   <div class="flex flex-col lg:w-[55%] items-center justify-center text-center gap-4">
-    <h1 class="mb-5 font-bold text-theme-strong">
-        <span class="block mb-3 font-normal text-theme text-sm tracking-[0.5rem] uppercase"> 
-          Welcome To </span> <span class="text-[60px]">New York State</span>
-    </h1>
- 
-<fieldset class="border-none flex max-w-[1160px] w-full m-0 p-0">
-    <legend class="w-96 mb-7 flex w-font-semibold text-theme md:text-[1.05rem]">
-      Explore the programs, services, and resources available in New York State.</legend>
-
-<div class="relative w-full h-[50px]">
-  <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
-   
-     <input
-        type="search"
-        id="ny-hero-search-input"
-        name="searchButton"
-        class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
-         focus:outline-[4px] focus:outline-accent 
-         border-[1px] border-theme border-solid rounded-l-lg
-          focus:border-accent [&::-webkit-search-cancel-button]:!appearance-none"
-         placeholder="Search NY.gov"
-         aria-label="Search.NY.gov"/>
-     
-    <button class="absolute right-2 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
-    focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
-    focus-visible:border-accent focus-visible:border-solid
-    text-white items-center justify-center !box-border " id="ny-hero-search-clear" type="button" aria-label="Clear search input">
-        <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
-    </button>
-    </div> 
-
-    <div class="flex h-[50px] justify-center align-center gap-2">
-       
-      <button type="submit" class="flex items-center justify-center gap-2 px-6
-      bg-theme text-white hover:text-white hover:bg-black
-      focus:text-white hover:outline-2 border-2 rounded-r-lg !appearance-none">
-        <span class="hidden sm:inline">Search</span>
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-      </button>
-
-     </div>
-        </fieldset>
-
-<script>
-  const searchInput = document.getElementById('ny-hero-search-input');
-  const clearBtn = document.getElementById('ny-hero-search-clear');
-
-  function toggleClearBtn() {
-    if (searchInput.value.length > 0) {
-      clearBtn.classList.remove('hidden');
-      clearBtn.classList.add('flex');
-    } else {
-      clearBtn.classList.add('hidden');
-      clearBtn.classList.remove('flex');
-    }
-  }
-
-  searchInput.addEventListener('input', toggleClearBtn);
-
-  clearBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    toggleClearBtn();
-    searchInput.focus();
-  });
-
-  // run once on load in case the field is pre-filled
-  toggleClearBtn();
-</script>
-
-    </div>
-    
-    <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
-       <img src="img/statefair_ride_hero.jpg" alt="New York State Fair (Syracuse, NY) © I Love NY" class="w-full h-full object-cover rounded-xl"/>
-            <span class="text-xs text-gray-500 mt-3 block w-full text-right"> New York State Fair (Syracuse, NY) © I Love NY </span>
-    </div> 
-</section>
 
 
-<section class="flex flex-col items-center max-w-[1160px] mx-auto">
+<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px]">
 
 
-    <h2 class="text-[28px] text-center mb-12 mx-4"> Helpful Guides and Resources</h2>
+    <h2 class="text-[28px] text-center mb-[38px] mx-4"> Helpful Guides and Resources</h2>
 
-    <div class="flex gap-6 flex-wrap justify-center">
+    <div class="flex flex-wrap xl:flex-nowrap w-full 
+                justify-center xl:justify-between
+                gap-6 xl:gap-0
+                px-8 xl:px-0
+                
+                ">
         
         <a  href="#" 
             class="flex flex-col no-underline group border border-solid border-neutral-200  
-            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
-            rounded-lg p-8 w-3/4 
-            sm:w-[350px]
+            hover:border-transparent focus:border-transparent 
+            focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 
+            w-3/4 sm:w-[350px]
             "
 
             aria-labelledby="tile-heading-1"
@@ -151,9 +77,10 @@
         
         <a  href="#" 
             class="flex flex-col no-underline group border border-solid border-neutral-200  
-            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
-            rounded-lg p-8 w-3/4 
-            sm:w-[350px]
+            hover:border-transparent focus:border-transparent 
+            focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 
+            w-3/4 sm:w-[350px]
             "
 
             aria-labelledby="tile-heading-2"
@@ -175,9 +102,10 @@
         
         <a  href="#" 
             class="flex flex-col no-underline group border border-solid border-neutral-200  
-            hover:border-transparent focus:border-transparent focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
-            rounded-lg p-8 w-3/4 
-            sm:w-[350px]
+            hover:border-transparent focus:border-transparent 
+            focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
+            rounded-lg p-8 
+            w-3/4 sm:w-[350px]
             "
 
             aria-labelledby="tile-heading-3"
@@ -203,45 +131,47 @@
 
 </section>
 
-<div class="h-32"></div>
 
- <section class="md:relative" > <!-- using a background image -->
+ <section class="relative mt-[80px]" > <!-- using a background image -->
 
-    <div class="flex bg-[url('thatcher-from-iloveny.avif')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
+    <div class="flex bg-[url('https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-08/thatcher-from-iloveny.jpg')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
     </div> <!--image -->
+    <div class=" md:absolute md:inset-y-0 md:left-0 md:right-0
+            md:mx-auto md:flex md:max-w-[1160px]
+            md:items-center md:justify-end">
+        <div class=" 
+                    
+                    flex flex-col 
+                    
+                    md:w-[400px] 
+                    md:border md:border-solid md:border-neutral-200 md:rounded-lg 
+                    p-[20px] md:p-8  md:mx-[60px]
+                    
+                    bg-theme-weak md:bg-white 
+                "    
+                    
+                    > <!-- card with details -->
+            <div class=""><img src="https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-09/ilovenylogo.png" class="w-24" alt="I love NY logo"/></div>
 
-    <div class=" 
-                md:absolute  right-0 
-                flex flex-col 
+            <h2 class="text-3xl">Discover New York</h2>
+
+            <p class="text-black leading-md mt-0">Many of New York State’s world- class attractions are accessible to and offer specialty programming for travelers with accessible walkways above the Adirondack forest treetops at the Wild Center.</p>
+
+            <div class="flex flex-col">
                 
-                md:w-[400px] 
-                md:border md:border-solid md:border-neutral-200 md:rounded-lg 
-                p-8 md:p-8  md:mx-12
-                md:inset-y-0 md:my-auto md:h-fit
-                bg-theme-weak md:bg-white 
-               "    
+                <a href="#" class="flex group text-link no-underline w-fit first:mb-4 last:mb-0">
+                    <span class="group-hover:underline group-focus:underline">An example first link </span>
+                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
+                    </a>
                 
-                > <!-- card with details -->
-        <div class=""><img src="iloveNY.png" class="w-24" alt="I love NY logo"/></div>
-
-        <h2 class="text-[20px]">Discover New York</h2>
-
-        <p class="text-black leading-md mt-0">Many of New York State’s world- class attractions are accessible to and offer specialty programming for travelers with accessible walkways above the Adirondack forest treetops at the Wild Center.</p>
-
-        <div class="flex flex-col">
-            
-            <a href="#" class="flex group text-link no-underline w-fit mb-2">
-                <span class="group-hover:underline group-focus:underline">An example first link </span>
-                <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                </a>
-            
-            <a href="#" class="flex group text-link no-underline w-fit mb-2">
-                <span class="group-hover:underline group-focus:underline">Visit NY </span>
-                <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                </a>
-            
-        </div>
-    </div><!-- end card with details -->
+                <a href="#" class="flex group text-link no-underline w-fit first:mb-4 last:mb-0">
+                    <span class="group-hover:underline group-focus:underline">Visit NY </span>
+                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
+                    </a>
+                
+            </div>
+        </div><!-- end card with details -->
+    </div>
 
 </section>
 
