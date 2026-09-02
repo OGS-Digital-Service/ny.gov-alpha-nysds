@@ -1,58 +1,77 @@
  {# Search Hero#}
-<section class="flex flex-col items-center lg:flex-row gap-10 max-w-[1160px] w-full mx-auto p-6 md:p-12">
-    {# Left Column with Hero Title & Search Bar #}
-   <div class="flex flex-col lg:w-[55%] items-center justify-center text-center gap-4">
-    <h1 class="mb-5 font-bold text-theme-strong">
-        <span class="block mb-3 font-normal text-theme text-sm tracking-[0.5rem] uppercase"> 
-          Welcome To </span> <span class="text-[60px]">New York State</span>
-    </h1>
- {# Text block above search bar #}
-<fieldset class="border-none flex max-w-[1160px] w-full m-0 p-0">
-    <legend class="w-96 mb-7 flex w-font-semibold text-theme md:text-[1.05rem]">
-      Explore the programs, services, and resources available in New York State.</legend>
+<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 md:p-12 gap-12">
+        {# Left Column with Hero Title & Search Bar #}
+        <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
-<div class="relative w-full h-[50px]">
-  <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
-   {# Search Input #}
-     <input
-        type="search"
-        id="ny-hero-search-input"
-        name="searchButton"
-        class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
-         focus:outline-[4px] focus:outline-accent 
-         border-[1px] border-theme border-solid rounded-l-lg
-          focus:border-accent [&::-webkit-search-cancel-button]:!appearance-none"
-         placeholder="Search NY.gov"
-         aria-label="Search.NY.gov"/>
-     {# Clear Search Button#}
-    <button class="absolute right-2 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
-    focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
-    focus-visible:border-accent focus-visible:border-solid
-    text-white items-center justify-center !box-border " id="ny-hero-search-clear" type="button" aria-label="Clear search input">
-        <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
-    </button>
-    </div> 
+          {# Text block above search bar #}
+          <h1 class="mb-10 text-theme-strong">
+              <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
+              <span class="text-[60px] font-extrabold">New York State</span>
+          </h1>
+          
+          {# Search Input #}
+          <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
+                
+                  <legend class="w-3/4 mx-auto mb-6 font-normal text-theme"> Explore the programs, services, and resources available in New York State. </legend>
+               
+                <div class="w-full flex relative">
+                    <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
+                    <input
+                        type="search"
+                        id="ny-hero-search-input"
+                        name="searchButton"
+                        class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
+                              focus:outline-2 focus:outline-accent 
+                              border-2 border-theme 
+                              border-solid rounded-l-lg
+                              border-r-0
+                             [&::-webkit-search-cancel-button]:!appearance-none"
+                        placeholder="Search NY.gov"
+                        aria-label="Search.NY.gov"/>
 
-    <div class="flex h-[50px] justify-center align-center gap-2">
-       {# Search Button #}
-      <button type="submit" class="flex items-center justify-center gap-2 px-6
-      bg-theme text-white hover:text-white hover:bg-black
-      focus:text-white hover:outline-2 border-2 rounded-r-lg !appearance-none">
-        <span class="hidden sm:inline">Search</span>
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-      </button>
+                    {# Clear Search Button#}
+                    <button class="absolute right-16 md:right-36 lg:right-1/4 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                                    focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
+                                  focus-visible:border-accent focus-visible:border-solid
+                                  text-white items-center justify-center !box-border " 
+                                  id="ny-hero-search-clear" 
+                                  type="button" 
+                                  aria-label="Clear search input">
+                        <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
+                    </button>
+                
 
-     </div>
-        </fieldset>
-{# Javascript for clear button to display only when typing in search input #}
+                
+                  {# Search Button #}
+                  <button type="submit" class="flex items-center justify-between h-[50px] md:w-36
+                                              px-4
+                                              bg-theme text-white 
+                                              hover:bg-black
+                                              focus:bg-black
+                                              
+                                              focus-visible:outline-2
+                          
+                                              focus-visible:!outline-accent
+                                              hover:outline-2
+                                              hover:outline-accent
+                                              border 
+                                              rounded-r-lg 
+                                              !appearance-none">
+                    <span class="hidden md:block text-[18px] font-bold">Search</span>
+                    <i class="fa-solid fa-magnifying-glass text-[20px]" aria-hidden="true"></i>
+                  </button>
+                </div> 
+
+          </fieldset>
+        </div>
+
+      {# Right Column with image placement #}
+      <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+        <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+        <span class="text-xs text-text-weak mt-2 block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
+      </div> 
+
+</section>
 <script>
 {% include './_clearbutton.js' %}
 </script>
-
-    </div>
-    {# Right Column with image placement #}
-    <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
-       <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl"/>
-            <span class="text-xs text-gray-500 mt-3 block w-full text-right"> {{params.caption}} </span>
-    </div> 
-</section>
