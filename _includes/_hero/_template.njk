@@ -1,5 +1,5 @@
  {# Search Hero#}
-<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 md:p-0 gap-12">
+<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 xl:p-0 gap-12">
         {# Left Column with Hero Title & Search Bar #}
         <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
@@ -10,6 +10,7 @@
           </h1>
           
           {# Search Input #}
+          <form>
           <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
                 
                   <legend class="w-3/4 lg:w-3/5 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
@@ -18,10 +19,11 @@
                     <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
                     <input
                         type="search"
-                        id="ny-hero-search-input"
+                        id="reimagine-hero-search-input"
                         name="searchButton"
                         class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
-                              focus:outline-2 focus:outline-accent 
+                              focus:outline-2 focus:outline-accent
+                              focus:outline-offset-1 
                               border-2 border-theme 
                               border-solid rounded-l-lg
                               border-r-0
@@ -31,7 +33,7 @@
                         aria-label="Search.NY.gov"/>
 
                     {# Clear Search Button#}
-                    <button class="absolute right-16 md:right-36 lg:right-1/4 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                    <button class="absolute right-16 md:right-36 lg:right-32 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
                                     focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
                                   focus-visible:border-accent focus-visible:border-solid
                                   text-white items-center justify-center !box-border " 
@@ -44,18 +46,23 @@
 
                 
                   {# Search Button #}
-                  <button type="submit" class="flex items-center justify-between h-[50px] md:w-36
+                  <button type="submit" id="reimagine-hero-search-submit"
+                  
+                  class="flex items-center justify-evenly h-[50px] md:w-40
                                               px-4
                                               bg-theme text-white 
                                               hover:bg-black
                                               focus:bg-black
                                               
                                               focus-visible:outline-2
-                          
+                                              focus-visible:outline-offset-2
+                                              focus-visible:border-black
                                               focus-visible:!outline-accent
-                                              hover:outline-2
-                                              hover:outline-accent
-                                              border 
+                                              
+                                              hover:border-accent
+                                              border-2 
+                                              border-solid
+                                              border-theme
                                               rounded-r-lg 
                                               !appearance-none">
                     <span class="hidden md:block text-[18px] font-bold">Search</span>
@@ -64,6 +71,7 @@
                 </div> 
 
           </fieldset>
+          </form>
         </div>
 
       {# Right Column with image placement #}
@@ -75,4 +83,7 @@
 </section>
 <script>
 {% include './_clearbutton.js' %}
+</script>
+<script>
+{% include './_searchbox.js' %}
 </script>

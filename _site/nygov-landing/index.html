@@ -178,7 +178,7 @@
 
 
  
-<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 md:p-0 gap-12">
+<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 xl:p-0 gap-12">
         
         <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
@@ -189,6 +189,7 @@
           </h1>
           
           
+          <form>
           <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
                 
                   <legend class="w-3/4 lg:w-3/5 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
@@ -197,10 +198,11 @@
                     <label class="sr-only" for="ny-hero-search-input">Search NY.gov</label>
                     <input
                         type="search"
-                        id="ny-hero-search-input"
+                        id="reimagine-hero-search-input"
                         name="searchButton"
                         class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
-                              focus:outline-2 focus:outline-accent 
+                              focus:outline-2 focus:outline-accent
+                              focus:outline-offset-1 
                               border-2 border-theme 
                               border-solid rounded-l-lg
                               border-r-0
@@ -210,7 +212,7 @@
                         aria-label="Search.NY.gov"/>
 
                     
-                    <button class="absolute right-16 md:right-36 lg:right-1/4 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                    <button class="absolute right-16 md:right-36 lg:right-32 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
                                     focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
                                   focus-visible:border-accent focus-visible:border-solid
                                   text-white items-center justify-center !box-border " 
@@ -223,18 +225,23 @@
 
                 
                   
-                  <button type="submit" class="flex items-center justify-between h-[50px] md:w-36
+                  <button type="submit" id="reimagine-hero-search-submit"
+                  
+                  class="flex items-center justify-evenly h-[50px] md:w-40
                                               px-4
                                               bg-theme text-white 
                                               hover:bg-black
                                               focus:bg-black
                                               
                                               focus-visible:outline-2
-                          
+                                              focus-visible:outline-offset-2
+                                              focus-visible:border-black
                                               focus-visible:!outline-accent
-                                              hover:outline-2
-                                              hover:outline-accent
-                                              border 
+                                              
+                                              hover:border-accent
+                                              border-2 
+                                              border-solid
+                                              border-theme
                                               rounded-r-lg 
                                               !appearance-none">
                     <span class="hidden md:block text-[18px] font-bold">Search</span>
@@ -243,6 +250,7 @@
                 </div> 
 
           </fieldset>
+          </form>
         </div>
 
       
@@ -253,7 +261,7 @@
 
 </section>
 <script>
-  const searchInput = document.getElementById('ny-hero-search-input');
+  const searchInput = document.getElementById('reimagine-hero-search-input');
   const clearBtn = document.getElementById('ny-hero-search-clear');
 
   function toggleClearBtn() {
@@ -277,8 +285,42 @@
   // run once on load in case the field is pre-filled
   toggleClearBtn();
 </script>
+<script>
 
-<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px]">
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('reimagine-hero-search-input');
+    const submitSearch = document.getElementById('reimagine-hero-search-submit');
+    console.log(searchInput)
+    function searchServices(e) {
+        e.preventDefault();
+        var searchTerm = searchInput.value;
+
+        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
+            window.location.href = "/search";
+        } else {
+            // First replace & with " and ", then encodeURIComponent
+            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
+            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
+
+            // Split the encoded term into parts to handle spaces correctly
+            const parts = encodedSearchTerm.split('+');
+            const properlyEncodedParts = parts.map(part => {
+                if (part.includes('and')) {
+                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
+                }
+                return encodeURIComponent(part);
+            });
+
+            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
+        }
+    }
+
+    submitSearch.addEventListener("click", searchServices);
+});
+
+</script>
+
+<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px] p-6 lg:p-0">
 
 
     <h2 class="text-[28px] text-center mb-[38px] mx-4"> Helpful Guides and Resources</h2>
