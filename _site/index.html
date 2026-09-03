@@ -36,9 +36,185 @@
 <div class="h-32"></div>
 
 
+ 
+<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 xl:p-0 gap-12 mt-[60px]">
+        
+        <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
+          
+          <h1 class="mb-10 text-theme-strong">
+              <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
+              <span class="text-[60px] font-extrabold">New York State</span>
+          </h1>
+          
+          
+          <form>
+          <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
+                
+                  <legend class="w-3/4 lg:w-3/5 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
+               
+                <div class="w-full flex relative h-[50px]">
+                    <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
+                    <input
+                        type="search"
+                        id="reimagine-hero-search-input"
+                        name="searchButton"
+                        class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
+                              focus:outline-2 focus:outline-accent
+                              focus:outline-offset-1 
+                              border-2 border-theme 
+                              border-solid rounded-l-lg
+                              border-r-0
+                              !box-border
+                             [&::-webkit-search-cancel-button]:!appearance-none"
+                        placeholder="Search NY.gov"
+                        aria-label="Search.NY.gov"/>
 
-<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px]">
+                    
+                    <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                                    focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
+                                  focus-visible:border-accent focus-visible:border-solid
+                                  text-white items-center justify-center !box-border " 
+                                  id="ny-hero-search-clear" 
+                                  type="button" 
+                                  aria-label="Clear search input">
+                        <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
+                    </button>
+                
+
+                
+                  
+                  <button type="submit" id="reimagine-hero-search-submit"
+                  
+                  class="flex items-center justify-evenly h-[50px] md:w-40
+                                              px-4
+                                              bg-theme text-white 
+                                              hover:bg-black
+                                              focus:bg-black
+                                              
+                                              focus-visible:outline-2
+                                              focus-visible:outline-offset-2
+                                              focus-visible:border-black
+                                              focus-visible:!outline-accent
+                                              
+                                              hover:border-accent
+                                              border-2 
+                                              border-solid
+                                              border-theme
+                                              rounded-r-lg 
+                                              !appearance-none">
+                    <span class="hidden md:block text-[18px] font-bold">Search</span>
+                    <i class="fa-solid fa-magnifying-glass text-[20px]" aria-hidden="true"></i>
+                  </button>
+                </div> 
+
+          </fieldset>
+          </form>
+        </div>
+
+      
+      <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+        <img src="https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-07/nychero.jpg" alt="New York State Fair (Syracuse, NY) © I Love NY" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+        <span class="text-xs text-text-weak mt-2 block w-full text-right" id="random-reload-caption"> New York State Fair (Syracuse, NY) © I Love NY </span>
+      </div> 
+
+</section>
+<script>
+  const searchInput = document.getElementById('reimagine-hero-search-input');
+  const clearBtn = document.getElementById('ny-hero-search-clear');
+
+  function toggleClearBtn() {
+    if (searchInput.value.length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+  }
+
+  searchInput.addEventListener('input', toggleClearBtn);
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    toggleClearBtn();
+    searchInput.focus();
+  });
+
+  // run once on load in case the field is pre-filled
+  toggleClearBtn();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('reimagine-hero-search-input');
+    const submitSearch = document.getElementById('reimagine-hero-search-submit');
+    console.log(searchInput)
+    function searchServices(e) {
+        e.preventDefault();
+        var searchTerm = searchInput.value;
+
+        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
+            window.location.href = "/search";
+        } else {
+            // First replace & with " and ", then encodeURIComponent
+            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
+            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
+
+            // Split the encoded term into parts to handle spaces correctly
+            const parts = encodedSearchTerm.split('+');
+            const properlyEncodedParts = parts.map(part => {
+                if (part.includes('and')) {
+                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
+                }
+                return encodeURIComponent(part);
+            });
+
+            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
+        }
+    }
+
+    submitSearch.addEventListener("click", searchServices);
+});
+
+</script>
+<script>
+
+    // Array of image objects
+    const images = [
+        {
+            src: 'https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyAutumn_01.JPG?h=426803fe&itok=ltW-Ml5p&focal_point_preview_value=57x18',
+            alt: 'A wide-angle view of Albany with fall foliage in the forefront.',
+            caption: 'Fall Albany Foliage Cityscape City'
+        },
+        {
+            src: 'https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/styles/hero_wide_short/public/2026-09/AlbanyAerials_01.JPG?itok=8y_DddHz&focal_point_preview_value=50x50',
+            alt: 'An aerial view of Albany New York',
+            caption: 'Albany Aerial Cityscape City'
+        },
+        {
+            src: 'https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/LI_Montauk_Lighthouse_Montauk_Point_State_Park.jpg?h=c5f5e628&itok=OC4a0euu&focal_point_preview_value=50x50',
+            alt: 'A scenic view of a lighthouse on the coast.',
+            caption: 'Montauk Lighthouse Montauk Point State Park Long Island'
+        }
+        // Add more images as needed
+    ];
+
+    function loadRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const selectedImage = images[randomIndex];
+
+        // Update the image and caption
+        document.getElementById('random-reload-image').src = selectedImage.src;
+        document.getElementById('random-reload-image').alt = selectedImage.alt;
+        document.getElementById('random-reload-caption').textContent = selectedImage.caption;        
+    }
+
+    // Load a random image when the page loads
+    window.onload = loadRandomImage;
+</script>
+
+<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px] p-6 lg:p-0">
 
 
     <h2 class="text-[28px] text-center mb-[38px] mx-4"> Helpful Guides and Resources</h2>
@@ -55,7 +231,7 @@
             hover:border-transparent focus:border-transparent 
             focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
             rounded-lg p-8 
-            w-3/4 sm:w-[350px]
+            w-3/4 sm:w-[360px]
             "
 
             aria-labelledby="tile-heading-1"
@@ -67,7 +243,7 @@
                 >
                 New Parent and Early Childhood 
             </h3>
-            <p class="text-black text-[18px] leading-lg mt-0"
+            <p class="text-black text-[18px] leading-6 mt-0"
                 id="tile-description-1"
                 >
                 Whether you’re expecting a child or caring for a newborn, you can find resources and services to help your family thrive.
@@ -80,7 +256,7 @@
             hover:border-transparent focus:border-transparent 
             focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
             rounded-lg p-8 
-            w-3/4 sm:w-[350px]
+            w-3/4 sm:w-[360px]
             "
 
             aria-labelledby="tile-heading-2"
@@ -92,7 +268,7 @@
                 >
                 Moving to New York State 
             </h3>
-            <p class="text-black text-[18px] leading-lg mt-0"
+            <p class="text-black text-[18px] leading-6 mt-0"
                 id="tile-description-2"
                 >
                 Are you ready to make New York State your home? Here’s information to help make the move easier, including regional highlights, jobs, housing, education and more.
@@ -105,7 +281,7 @@
             hover:border-transparent focus:border-transparent 
             focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
             rounded-lg p-8 
-            w-3/4 sm:w-[350px]
+            w-3/4 sm:w-[360px]
             "
 
             aria-labelledby="tile-heading-3"
@@ -117,7 +293,7 @@
                 >
                 Buying a Home 
             </h3>
-            <p class="text-black text-[18px] leading-lg mt-0"
+            <p class="text-black text-[18px] leading-6 mt-0"
                 id="tile-description-3"
                 >
                 Buying a home is one of the biggest financial decisions you&#39;ll make. Take time to understand what you can afford, research the property, and learn more about homeownership.

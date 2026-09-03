@@ -1,4 +1,4 @@
-  const searchInput = document.getElementById('ny-hero-search-input');
+  const searchInput = document.getElementById('reimagine-hero-search-input');
   const clearBtn = document.getElementById('ny-hero-search-clear');
 
   function toggleClearBtn() {

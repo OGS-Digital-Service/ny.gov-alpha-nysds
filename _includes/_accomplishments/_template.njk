@@ -1,4 +1,4 @@
-<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px]">
+<section class="flex flex-col items-center max-w-[1160px] mx-auto mt-[80px] p-6 lg:p-0">
 
 
     <h2 class="text-[28px] text-center mb-[38px] mx-4"> {{params.title}}</h2>
@@ -15,7 +15,7 @@
             hover:border-transparent focus:border-transparent 
             focus:outline focus:outline-2 focus:outline-theme hover:outline hover:outline-2 hover:outline-neutral-900 
             rounded-lg p-8 
-            w-3/4 sm:w-[350px]
+            w-3/4 sm:w-[360px]
             "
 
             aria-labelledby="tile-heading-{{loop.index}}"
@@ -27,7 +27,7 @@
                 >
                 {{tile.title}} 
             </h3>
-            <p class="text-black text-[18px] leading-lg mt-0"
+            <p class="text-black text-[18px] leading-6 mt-0"
                 id="tile-description-{{loop.index}}"
                 >
                 {{tile.text}}

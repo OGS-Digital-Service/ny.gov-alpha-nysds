@@ -3,8 +3,8 @@ layout: render.njk
 title: NYS Digital Service NYgov Alpha Test
 ---
 {% from './_includes/_components.njk' import nysdsSearch, accomplishments, hero, imageFull %}
-
-{# {{ accomplishments({
+{# 
+{{ accomplishments({
     title: "Helpful Guides and Resources",
     description:"",
     tiles: [
@@ -36,17 +36,17 @@ title: NYS Digital Service NYgov Alpha Test
     {% include './css/tailwind.css' %}
     </style> #}
 
-{# 
 {{ hero({
     title: "",
     headline:"",
     searchDescription:"",
-    image:"statefair_ride_hero.jpg",
+    image:"https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-07/nychero.jpg",
     caption:"New York State Fair (Syracuse, NY) © I Love NY",
     alt:"New York State Fair (Syracuse, NY) © I Love NY"
     })
-}} #}
+}}
 
+{# 
 {{ imageFull({
     icon:"https://nygovd8devbox1.prod.acquia-sites.com/sites/default/files/2026-09/ilovenylogo.png",
     title: "Discover New York",
@@ -65,4 +65,4 @@ title: NYS Digital Service NYgov Alpha Test
     ]
     
     })
-}}
+}} #}
