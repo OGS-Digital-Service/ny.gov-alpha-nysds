@@ -6,16 +6,16 @@
           {# Text block above search bar #}
           <h1 class="mb-10 text-theme-strong">
               <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
-              <span class="text-[60px] font-extrabold">New York State</span>
+              <span class="text-[44px] md:text-[60px] font-extrabold">New York State</span>
           </h1>
           
           {# Search Input #}
           <form>
-          <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
+          <fieldset class="w-full border-none flex flex-col m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
                 
-                  <legend class="w-3/4 lg:w-3/5 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
+                  <legend class="w-3/4 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
                
-                <div class="w-full flex relative h-[50px]">
+                <div class="w-full flex flex-items:center relative h-[50px]">
                     <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
                     <input
                         type="search"
@@ -65,8 +65,8 @@
                                               border-theme
                                               rounded-r-lg 
                                               !appearance-none">
-                    <span class="hidden md:block text-[18px] font-bold">Search</span>
-                    <i class="fa-solid fa-magnifying-glass text-[20px]" aria-hidden="true"></i>
+                    <span class="hidden md:block text-[18px] font-400">Search</span>
+                    <i class="fa-solid fa-magnifying-glass ml-[10px] text-[20px]" aria-hidden="true"></i>
                   </button>
                 </div> 
 
@@ -77,7 +77,7 @@
       {# Right Column with image placement #}
       <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
         <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
-        <span class="text-xs text-text-weak mt-2 block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
+        <span class="text-xs text-text-weak block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
       </div> 
 
 </section>
