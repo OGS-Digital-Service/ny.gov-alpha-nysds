@@ -1,85 +1,86 @@
  {# Search Hero#}
-<section class="flex flex-col lg:flex-row w-full max-w-[1160px] mx-auto p-6 xl:p-0 gap-12 mt-[60px]">
-        {# Left Column with Hero Title & Search Bar #}
-        <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
+<section class="flex w-full  justify-center  mt-[60px] ">
+        <div class="flex flex-col lg:flex-row   max-w-[1160px] gap-12 mx-[20px] md:mx-[35px]">
+          {# Left Column with Hero Title & Search Bar #}
+          <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
-          {# Text block above search bar #}
-          <h1 class="mb-10 text-theme-strong">
-              <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
-              <span class="text-[60px] font-extrabold">New York State</span>
-          </h1>
-          
-          {# Search Input #}
-          <form>
-          <fieldset class="border-none flex flex-col w-full m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
-                
-                  <legend class="w-3/4 lg:w-3/5 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
-               
-                <div class="w-full flex relative h-[50px]">
-                    <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
-                    <input
-                        type="search"
-                        id="reimagine-hero-search-input"
-                        name="searchButton"
-                        class="w-full h-[50px] pl-[16px] pr-10 py-3.5 
-                              focus:outline-2 focus:outline-accent
-                              focus:outline-offset-1 
-                              border-2 border-theme 
-                              border-solid rounded-l-lg
-                              border-r-0
-                              !box-border
-                             [&::-webkit-search-cancel-button]:!appearance-none"
-                        placeholder="Search NY.gov"
-                        aria-label="Search.NY.gov"/>
-
-                    {# Clear Search Button#}
-                    <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
-                                    focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
-                                  focus-visible:border-accent focus-visible:border-solid
-                                  text-white items-center justify-center !box-border " 
-                                  id="ny-hero-search-clear" 
-                                  type="button" 
-                                  aria-label="Clear search input">
-                        <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
-                    </button>
-                
-
-                
-                  {# Search Button #}
-                  <button type="submit" id="reimagine-hero-search-submit"
+            {# Text block above search bar #}
+            <h1 class="mt-0 mb-10 text-theme-strong">
+                <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
+                <span class="text-[44px] md:text-[60px] font-extrabold">New York State</span>
+            </h1>
+            
+            {# Search Input #}
+            <form class="w-full">
+            <fieldset class="w-full border-none flex flex-col m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
                   
-                  class="flex items-center justify-evenly h-[50px] md:w-40
-                                              px-4
-                                              bg-theme text-white 
-                                              hover:bg-black
-                                              focus:bg-black
-                                              
-                                              focus-visible:outline-2
-                                              focus-visible:outline-offset-2
-                                              focus-visible:border-black
-                                              focus-visible:!outline-accent
-                                              
-                                              hover:border-accent
-                                              border-2 
-                                              border-solid
-                                              border-theme
-                                              rounded-r-lg 
-                                              !appearance-none">
-                    <span class="hidden md:block text-[18px] font-bold">Search</span>
-                    <i class="fa-solid fa-magnifying-glass text-[20px]" aria-hidden="true"></i>
-                  </button>
-                </div> 
+                    <legend class="w-3/4 mx-auto mb-6 font-normal text-lg text-theme"> Explore the programs, services, and resources available in New York State. </legend>
+                
+                  <div class="w-full flex flex-items:center relative h-[50px]">
+                      <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
+                      <input
+                          type="search"
+                          id="reimagine-hero-search-input"
+                          name="searchButton"
+                          class="w-full h-[50px] pl-[16px] pr-10 pt-0.5
+                                focus:outline-2 focus:outline-accent
+                                focus:outline-offset-1 
+                                border-2 border-theme 
+                                border-solid rounded-l-lg
+                                border-r-0
+                                !box-border
+                              [&::-webkit-search-cancel-button]:!appearance-none"
+                          placeholder="Search NY.gov"
+                          aria-label="Search.NY.gov"/>
 
-          </fieldset>
-          </form>
-        </div>
+                      {# Clear Search Button#}
+                      <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                                      focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
+                                    focus-visible:border-accent focus-visible:border-solid
+                                    text-white items-center justify-center !box-border " 
+                                    id="ny-hero-search-clear" 
+                                    type="button" 
+                                    aria-label="Clear search input">
+                          <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
+                      </button>
+                  
 
-      {# Right Column with image placement #}
-      <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
-        <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
-        <span class="text-xs text-text-weak mt-2 block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
-      </div> 
+                  
+                    {# Search Button #}
+                    <button type="submit" id="reimagine-hero-search-submit"
+                    
+                    class="flex items-center justify-evenly h-[50px] md:w-40
+                                                px-4
+                                                bg-theme text-white 
+                                                hover:bg-black
+                                                focus:bg-black
+                                      
+                                                focus-visible:outline-2
+                                                focus-visible:outline-offset-2
+                                                focus-visible:border-black
+                                                focus-visible:!outline-accent
+                                                
+                                                hover:border-accent
+                                                border-2 
+                                                border-solid
+                                                border-theme
+                                                rounded-r-lg 
+                                                !appearance-none">
+                      <span class="hidden md:block text-[18px] font-400 pt-0.5">Search</span>
+                      <i class="fa-solid fa-magnifying-glass md:ml-[10px] text-[20px]" aria-hidden="true"></i>
+                    </button>
+                  </div> 
 
+            </fieldset>
+            </form>
+          </div>
+
+        {# Right Column with image placement #}
+        <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+          <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+          <span class="text-xs text-text-weak block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
+        </div> 
+      </div>
 </section>
 <script>
 {% include './_clearbutton.js' %}
