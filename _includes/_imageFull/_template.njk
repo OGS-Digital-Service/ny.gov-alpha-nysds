@@ -1,4 +1,4 @@
- <section class="relative mt-[80px]" > <!-- using a background image -->
+ <section class="relative" > <!-- using a background image -->
 
     <div class="flex bg-[url('{{params.image}}')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
     </div> <!--image -->
@@ -11,21 +11,23 @@
                     
                     md:w-[400px] 
                     md:border md:border-solid md:border-neutral-200 md:rounded-lg 
-                    p-[20px] md:p-8  md:mx-[60px]
+                    p-[20px] md:p-8  mx-0 md:mx-[35px] xl:mx-0
                     
                     bg-theme-weak md:bg-white 
                 "    
                     
                     > <!-- card with details -->
-            <div class=""><img src="{{params.icon}}" class="w-24" alt="I love NY logo"/></div>
+            {% if params.icon %}
+                <div class=""><img src="{{params.icon}}" class="w-32 mt-[15px] md:mt-[3px]" alt="I love NY logo"/></div>
+            {% endif %}
 
-            <h2 class="text-3xl">{{params.title}}</h2>
+            <h2 class="text-3xl/7 mt-5 mb-[10px]">{{params.title}}</h2>
 
-            <p class="text-black leading-md mt-0">{{params.description}}</p>
+            <p class="text-black leading-md mt-0 text-md mb-5">{{params.description}}</p>
 
             <div class="flex flex-col">
                 {% for link in params.links %}
-                <a href="{{link.url}}" class="flex group text-link no-underline w-fit first:mb-4 last:mb-0">
+                <a href="{{link.url}}" class="flex group text-link no-underline w-fit first:mb-4 last:mb-[15px] md:last:mb-[3px]">
                     <span class="group-hover:underline group-focus:underline">{{link.text}} </span>
                     <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
                     </a>
