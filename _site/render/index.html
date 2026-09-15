@@ -7,76 +7,193 @@
 
 
 
+ 
+<section class="flex w-full  justify-center  mt-[60px] ">
+        <div class="w-full flex flex-col lg:flex-row   max-w-[1160px] gap-12 mx-[20px] md:mx-[35px]">
+          
+          <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
-
-
- <section class="relative" data-name="tourism paragraph"> <!-- using a background image -->
-
-    <div class="flex bg-[url('https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/2026-09/thatcher-from-iloveny.jpg')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
-    </div> <!--image -->
-    <div class=" md:absolute md:inset-y-0 md:left-0 md:right-0
-            md:mx-auto md:flex md:max-w-[1160px]
-            md:items-center md:justify-end">
-        <div class=" 
-                    
-                    flex flex-col 
-                    
-                    md:w-[400px] 
-                    md:border md:border-solid md:border-neutral-200 md:rounded-lg 
-                    p-[20px] md:p-8  mx-0 md:mx-[35px] xl:mx-0
-                    
-                    bg-theme-weak md:bg-white 
-                "    
-                    
-                    > <!-- card with details -->
             
-                <div class=""><img src="https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/2026-09/ilovenylogo.png" class="w-32 mt-[15px] md:mt-[3px]" alt="I love NY logo"/></div>
+            <h1 class="mt-0 mb-10 text-theme-strong">
+                <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
+                <span class="text-[44px] md:text-[60px] font-extrabold">New York State</span>
+            </h1>
             
-
-            <h2 class="text-3xl/7 mt-5 mb-[10px]">Discover New York</h2>
-
-            <p class="text-black leading-md mt-0 text-md mb-5">With thousands of acres of wilderness, tons of incredible history, vibrant cities and local cultures, New York State has something for everyone. Find your travel inspiration by discovering what it is that you love about New York.</p>
-
-            <div class="flex flex-col">
+            
+            <form class="w-full">
+            <fieldset class="w-full border-none flex flex-col m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
+                  
+                    <legend class="w-3/4 mx-auto mb-6 font-normal text-lg/[24px] text-theme"> Explore the programs, services, and resources available in New York State. </legend>
                 
-                <a href="https://www.iloveny.com" class="flex group text-link no-underline w-fit first:mb-4 last:mb-[15px] md:last:mb-[3px]">
-                    <span class="group-hover:underline group-focus:underline">Visit New York </span>
-                    <!-- added sr-only opens new window alt text -->
-                <span class="sr-only"> opens in new window</span>
-                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                    </a>
-                
-                <a href="https://www.iloveny.com/things-to-do/fall/foliage-report/" class="flex group text-link no-underline w-fit first:mb-4 last:mb-[15px] md:last:mb-[3px]">
-                    <span class="group-hover:underline group-focus:underline">View the Fall Foliage Report </span>
-                    <!-- added sr-only opens new window alt text -->
-                <span class="sr-only"> opens in new window</span>
-                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                    </a>
-                
-            </div>
-        </div><!-- end card with details -->
-    </div>
+                  <div class="w-full flex flex-items:center relative h-[50px]">
+                      <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
+                      <input
+                          type="search"
+                          id="reimagine-hero-search-input"
+                          name="searchButton"
+                          class="w-full h-[50px] pl-[16px] pr-10 pt-0.5
+                                focus:outline-2 focus:outline-accent
+                                focus:outline-offset-1 
+                                border-2 border-theme 
+                                border-solid rounded-l-lg
+                                border-r-0
+                                !box-border
+                              [&::-webkit-search-cancel-button]:!appearance-none"
+                          placeholder="Search NY.gov"
+                          aria-label="Search.NY.gov"/>
 
+                      
+                      <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                                      focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
+                                    focus-visible:border-accent focus-visible:border-solid
+                                    text-white items-center justify-center !box-border " 
+                                    id="ny-hero-search-clear" 
+                                    type="button" 
+                                    aria-label="Clear search input">
+                          <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
+                      </button>
+                  
+
+                  
+                    
+                    <button type="submit" id="reimagine-hero-search-submit"
+                    
+                    class="flex items-center justify-evenly h-[50px] md:w-40
+                                                px-4
+                                                bg-theme text-white 
+                                                hover:bg-black
+                                                focus:bg-black
+                                      
+                                                focus-visible:outline-2
+                                                focus-visible:outline-offset-2
+                                                focus-visible:border-black
+                                                focus-visible:!outline-accent
+                                                
+                                                hover:border-accent
+                                                border-2 
+                                                border-solid
+                                                border-theme
+                                                rounded-r-lg 
+                                                !appearance-none">
+                      <span class="hidden md:block text-[18px] font-400 pt-0.5">Search</span>
+                      <i class="fa-solid fa-magnifying-glass md:ml-[10px] text-[20px]" aria-hidden="true"></i>
+                    </button>
+                  </div> 
+
+            </fieldset>
+            </form>
+          </div>
+
+        
+        <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+          <img src="#" alt="#" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+          <span class="text-xs text-text-weak block w-full text-right" id="random-reload-caption">  </span>
+        </div> 
+      </div>
 </section>
 <script>
-     document.addEventListener('DOMContentLoaded', function() {
-            // Select the element with data-name="tourism paragraph"
-            const tourismParagraphElement = document.querySelector('[data-name="tourism paragraph"]');
+  const searchInput = document.getElementById('reimagine-hero-search-input');
+  const clearBtn = document.getElementById('ny-hero-search-clear');
 
-            // Check if the element exists
-            if (tourismParagraphElement) {
-                // Find the closest element with class 't-section__content'
-                const targetElement = tourismParagraphElement.closest('.t-section__content');
+  function toggleClearBtn() {
+    if (searchInput.value.length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+  }
 
-                // Check if the target element exists
-                if (targetElement) {
-                    // Add the class 'no-margin-top' to the closest parent with class 't-section__content'
-                    targetElement.classList.add('-no-margin-top');
-                } else {
-                    console.warn('No element with the class "t-section__content" found within the specified context.');
-                }
-            } else {
-                console.warn('No element with data-name="tourism paragraph" found.');
-            }
-        });
+  searchInput.addEventListener('input', toggleClearBtn);
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    toggleClearBtn();
+    searchInput.focus();
+  });
+
+  // run once on load in case the field is pre-filled
+  toggleClearBtn();
 </script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('reimagine-hero-search-input');
+    const submitSearch = document.getElementById('reimagine-hero-search-submit');
+    console.log(searchInput)
+    function searchServices(e) {
+        e.preventDefault();
+        var searchTerm = searchInput.value;
+
+        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
+            window.location.href = "/search";
+        } else {
+            // First replace & with " and ", then encodeURIComponent
+            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
+            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
+
+            // Split the encoded term into parts to handle spaces correctly
+            const parts = encodedSearchTerm.split('+');
+            const properlyEncodedParts = parts.map(part => {
+                if (part.includes('and')) {
+                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
+                }
+                return encodeURIComponent(part);
+            });
+
+            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
+        }
+    }
+
+    submitSearch.addEventListener("click", searchServices);
+});
+
+</script>
+<script>
+
+    // Array of image objects
+    const images = [
+        {
+        src: 'https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/styles/hero_wide/public/2026-09/AlbanyAutumn_01.JPG?h=26eb8729&itok=SSy3hT4n&focal_point_preview_value=50x50',
+        alt: 'A wide-angle view of Albany with fall foliage in the forefront.',
+        caption: 'Fall Albany Foliage Cityscape City'
+        },
+        {
+        src: 'https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyAerials_01.JPG?h=ac4592dd&itok=dQi9UIXV&focal_point_preview_value=66x46',
+        alt: 'An aerial view of Albany New York',
+        caption: 'Albany Aerial Cityscape City'
+        },
+        {
+        src: 'https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyCapitol.jpg?h=b5f6a62e&itok=9sjEkzrW&focal_point_preview_value=50x50',
+        alt: 'A shot of Albany buildings glowing at dusk',
+        caption: 'Albany Capitol Dusk Downtown New York'
+        },
+            {
+        src: 'https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/Long_Island_Spring_Daffodils_Bayard_Cutting.gif?itok=qqdBYUcQ&focal_point_preview_value=50x50',
+        alt: 'Spring daffodils bloom in front of an arboretum.',
+        caption: 'Long Island Spring Daffodils Bayard Cutting'
+        },
+        {
+        src: 'https://nygovd8devbox2.prod.acquia-sites.com/sites/default/files/styles/hero_wide_tall/public/2026-09/LI_Montauk_Lighthouse_Montauk_Point_State_Park.jpg?itok=DuN1qWD5&focal_point_preview_value=50x50',
+        alt: 'A scenic view of a lighthouse on the coast.',
+        caption: 'Montauk Lighthouse Montauk Point State Park Long Island'
+        }
+        // Add more images as needed
+    ];
+
+    function loadRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const selectedImage = images[randomIndex];
+
+        // Update the image and caption
+        document.getElementById('random-reload-image').src = selectedImage.src;
+        document.getElementById('random-reload-image').alt = selectedImage.alt;
+        document.getElementById('random-reload-caption').textContent = selectedImage.caption;        
+    }
+
+    // Load a random image when the page loads
+    window.onload = loadRandomImage;
+</script>
+
+

@@ -17,7 +17,6 @@ Thumbs.db
 /cache
 /reports
 /node_modules
-render.njk
 /_site/render
 /.vscode
 /_site/css/nysds-utilities
