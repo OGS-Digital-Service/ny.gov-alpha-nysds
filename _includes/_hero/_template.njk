@@ -37,7 +37,7 @@
                       <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
                                       focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
                                     focus-visible:border-accent focus-visible:border-solid
-                                    text-white items-center justify-center !box-border " 
+                                    text-white items-center justify-center !box-border border border-transparent " 
                                     id="ny-hero-search-clear" 
                                     type="button" 
                                     aria-label="Clear search input">
@@ -79,6 +79,10 @@
         <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
           <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
           <span class="text-xs text-text-weak block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
+          <span class="object-left" hidden></span>
+            <span class="object-center" hidden></span>
+            <span class="object-right" hidden></span>
+
         </div> 
       </div>
 </section>
