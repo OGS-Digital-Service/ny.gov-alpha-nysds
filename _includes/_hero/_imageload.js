@@ -31,7 +31,7 @@ const images = [
         focalPoint: "center"
     },
     {
-        src: "https://www.ny.gov/sites/default/files/styles/hero_wide/public/2026-09/AlbanyAutumn_01.jpg?h=26eb8729&itok=Hx3jH9rv&focal_point_preview_value=50x50",
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyAutumn_01%20%281%29.jpg?itok=kXn6HUKJ&focal_point_preview_value=50x50",
         alt: "Fall foliage fills a park below the downtown Albany skyline under heavy clouds. Trees with fall foliage and the Empire State Plaza.",
         caption: "Aerial view of Albany foliage – Albany, NY",
         focalPoint: "center"
@@ -43,7 +43,7 @@ const images = [
         focalPoint: "right"
     },
     {
-        src: "https://www.ny.gov/sites/default/files/styles/hero_wide/public/2026-09/Fall_River.jpg?h=bc78a09e&itok=xMoJwhCw&focal_point_preview_value=50x79",
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/Fall_River%20%281%29.jpg?h=b5f6a62e&itok=We2pEP8E&focal_point_preview_value=50x50",
         alt: "A lighthouse on a stone pier with fall foliage and mountains behind it. A red brick lighthouse with a white tower stands on a stone base in the middle of a wide river. Behind it, fall foliage and layered mountains.",
         caption: "Hudson-Athens Lighthouse – Hudson, NY",
         focalPoint: "left"
