@@ -77,14 +77,17 @@
           </div>
 
         {# Right Column with image placement #}
-        <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
-          <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
-          <span class="text-xs/4 pb-[50px] text-text-weak block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
-          <span class="object-left" hidden></span>
+        <div class="">
+          <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+            <img src="{{params.image}}" alt="{{params.alt}}" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+           
+            <span class="object-left" hidden></span>
             <span class="object-center" hidden></span>
             <span class="object-right" hidden></span>
-
-        </div> 
+          </div> 
+           <span class="text-xs/4 mt-1 text-text-weak block w-full text-right" id="random-reload-caption"> {{params.caption}} </span>
+        </div>
+        
       </div>
 </section>
 <script>

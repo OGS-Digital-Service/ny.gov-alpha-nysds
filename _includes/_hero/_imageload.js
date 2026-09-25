@@ -9,7 +9,7 @@ const images = [
     {
         src: "https://www.ny.gov/sites/default/files/2026-09/GKH_DataCenterMoratorium.jpg",
         alt: "Governor Hochul holds a signed document while three people applaud behind her. Governor Hochul is in an olive-green blazer, holding an official document as three standing adults applaud behind her. The U.S. and New York State flags are visible in the background.",
-        caption: "Governor Kathy Hochul signs Executive Order to create the nation’s first moratorium on new hyperscale data centers - Brooklyn, NY",
+        caption: "Governor Hochul signs Executive Order to create the nation’s first moratorium on new hyperscale data centers - Brooklyn, NY",
         focalPoint: "center"
     },
     {
