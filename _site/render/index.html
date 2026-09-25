@@ -7,76 +7,258 @@
 
 
 
+ 
+<section class="flex w-full  justify-center  mt-[60px] ">
+        <div class="w-full flex flex-col lg:flex-row   max-w-[1160px] gap-12 mx-[20px] md:mx-[35px]">
+          
+          <div class="flex flex-col w-full lg:w-[55%] items-center justify-center text-center">
 
-
-
- <section class="relative" data-name="tourism paragraph"> <!-- using a background image -->
-
-    <div class="flex bg-[url('https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/AdirondacksBigCherryPatchPond.jpg')] bg-no-repeat bg-cover bg-center justify-end h-96   md:h-[calc(65vh)] max-h-[700px]  w-full">
-    </div> <!--image -->
-    <div class=" md:absolute md:inset-y-0 md:left-0 md:right-0
-            md:mx-auto md:flex md:max-w-[1160px]
-            md:items-center md:justify-end">
-        <div class=" 
-                    
-                    flex flex-col 
-                    
-                    md:w-[400px] 
-                    md:border md:border-solid md:border-neutral-200 md:rounded-lg 
-                    p-[20px] md:p-8  mx-0 md:mx-[35px] xl:mx-0
-                    
-                    bg-theme-weak md:bg-white 
-                "    
-                    
-                    > <!-- card with details -->
             
-                <div class=""><img src="https://www.ny.gov/sites/default/files/2026-09/ilovenylogo.png" class="w-32 mt-[15px] md:mt-[3px]" alt="I love NY logo"/></div>
+            <h1 class="mt-0 mb-10 text-theme-strong">
+                <span class="block mb-3 font-normal text-theme text-[20px] tracking-[0.5rem] uppercase"> Welcome To </span> 
+                <span class="text-[44px] md:text-[60px] font-extrabold">New York State</span>
+            </h1>
             
-
-            <h2 class="text-3xl/7 mt-5 mb-[10px]">Discover New York</h2>
-
-            <p class="text-black leading-md mt-0 text-md mb-5">With thousands of acres of wilderness, tons of incredible history, vibrant cities and local cultures, New York State has something for everyone. Find your travel inspiration by discovering what it is that you love about New York.</p>
-
-            <div class="flex flex-col">
+            
+            <form class="w-full">
+            <fieldset class="w-full border-none flex flex-col m-0 p-0 justify-center mx-auto items-center text-center lg:mb-0">
+                  
+                    <legend class="w-3/4 mx-auto mb-6 font-normal text-lg/[24px] text-theme"> Explore the programs, services, and resources available in New York State. </legend>
                 
-                <a href="https://www.iloveny.com" class="flex group text-link no-underline w-fit first:mb-4 last:mb-[15px] md:last:mb-[3px]">
-                    <span class="group-hover:underline group-focus:underline">Visit New York </span>
-                    <!-- added sr-only opens new window alt text -->
-                <span class="sr-only">, opens in new window</span>
-                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                    </a>
-                
-                <a href="https://www.iloveny.com/things-to-do/fall/foliage-report/" class="flex group text-link no-underline w-fit first:mb-4 last:mb-[15px] md:last:mb-[3px]">
-                    <span class="group-hover:underline group-focus:underline">View the Fall Foliage Report </span>
-                    <!-- added sr-only opens new window alt text -->
-                <span class="sr-only">, opens in new window</span>
-                    <span class="fa-solid fa-up-right-from-square text-link text-[12px] ml-2 mt-0.5 group-hover:no-underline group-focus:no-underline" aria-hidden="true"></span>
-                    </a>
-                
-            </div>
-        </div><!-- end card with details -->
-    </div>
+                  <div class="w-full flex flex-items:center relative h-[50px]">
+                      <label class="sr-only" for="reimagine-hero-search-input">Search NY.gov</label>
+                      <input
+                          type="search"
+                          id="reimagine-hero-search-input"
+                          name="searchButton"
+                          class="w-full h-[50px] pl-[16px] pr-10 pt-0.5
+                                focus:outline-2 focus:outline-accent
+                                focus:outline-offset-1 
+                                border-2 border-theme 
+                                border-solid rounded-l-lg
+                                border-r-0
+                                !box-border
+                                bg-white
+                              [&::-webkit-search-cancel-button]:!appearance-none"
+                          placeholder="Search NY.gov"
+                          aria-label="Search.NY.gov"/>
 
+                      
+                      <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                                      focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
+                                    focus-visible:border-accent focus-visible:border-solid
+                                    text-white items-center justify-center !box-border border border-transparent " 
+                                    id="ny-hero-search-clear" 
+                                    type="button" 
+                                    aria-label="Clear search input">
+                          <i class="fa-solid fa-xmark text-xs" aria-hidden="true"></i>
+                      </button>
+                  
+
+                  
+                    
+                    <button type="submit" id="reimagine-hero-search-submit"
+                    
+                    class="flex items-center justify-evenly h-[50px] md:w-40
+                                                px-4
+                                                bg-theme text-white 
+                                                hover:bg-black
+                                                focus:bg-black
+                                      
+                                                focus-visible:outline-2
+                                                focus-visible:outline-offset-2
+                                                focus-visible:border-black
+                                                focus-visible:!outline-accent
+                                                
+                                                hover:border-accent
+                                                border-2 
+                                                border-solid
+                                                border-theme
+                                                rounded-r-lg 
+                                                !appearance-none">
+                      <span class="hidden md:block text-[18px] font-400 pt-0.5">Search</span>
+                      <i class="fa-solid fa-magnifying-glass md:ml-[10px] text-[20px]" aria-hidden="true"></i>
+                    </button>
+                  </div> 
+
+            </fieldset>
+            </form>
+          </div>
+
+        
+        <div class="lg:w-[500px] md:h-[320px] lg:h-[400px]">
+          <img src="" alt="" class="w-full h-full object-cover rounded-xl" id="random-reload-image"/>
+          <span class="text-xs/4 pb-[50px] text-text-weak block w-full text-right" id="random-reload-caption">  </span>
+          <span class="object-left" hidden></span>
+            <span class="object-center" hidden></span>
+            <span class="object-right" hidden></span>
+
+        </div> 
+      </div>
 </section>
 <script>
-     document.addEventListener('DOMContentLoaded', function() {
-            // Select the element with data-name="tourism paragraph"
-            const tourismParagraphElement = document.querySelector('[data-name="tourism paragraph"]');
+  const searchInput = document.getElementById('reimagine-hero-search-input');
+  const clearBtn = document.getElementById('ny-hero-search-clear');
 
-            // Check if the element exists
-            if (tourismParagraphElement) {
-                // Find the closest element with class 't-section__content'
-                const targetElement = tourismParagraphElement.closest('.t-section__content');
+  function toggleClearBtn() {
+    if (searchInput.value.length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+  }
 
-                // Check if the target element exists
-                if (targetElement) {
-                    // Add the class 'no-margin-top' to the closest parent with class 't-section__content'
-                    targetElement.classList.add('-no-margin-top');
-                } else {
-                    console.warn('No element with the class "t-section__content" found within the specified context.');
-                }
-            } else {
-                console.warn('No element with data-name="tourism paragraph" found.');
-            }
-        });
+  searchInput.addEventListener('input', toggleClearBtn);
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    toggleClearBtn();
+    searchInput.focus();
+  });
+
+  // run once on load in case the field is pre-filled
+  toggleClearBtn();
 </script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('reimagine-hero-search-input');
+    const submitSearch = document.getElementById('reimagine-hero-search-submit');
+    console.log(searchInput)
+    function searchServices(e) {
+        e.preventDefault();
+        var searchTerm = searchInput.value;
+
+        if (!searchTerm.trim()) {  // Check for empty or whitespace-only input
+            window.location.href = "/search";
+        } else {
+            // First replace & with " and ", then encodeURIComponent
+            const cleanSearchTerm = searchTerm.replace(/&/g, 'and');
+            const encodedSearchTerm = encodeURIComponent(cleanSearchTerm);
+
+            // Split the encoded term into parts to handle spaces correctly
+            const parts = encodedSearchTerm.split('+');
+            const properlyEncodedParts = parts.map(part => {
+                if (part.includes('and')) {
+                    return part.replace(/&/g, ' and').replace(/\+/g, '%20');  // Fix any remaining issues
+                }
+                return encodeURIComponent(part);
+            });
+
+            window.location.href = `/search/?searchstax[query]=${parts.join('%20')}&searchstax[page]=1&searchstax[model]=Sitewide`;
+        }
+    }
+
+    submitSearch.addEventListener("click", searchServices);
+});
+
+</script>
+<script>
+// Array of image objects
+const images = [
+  {
+        src: "https://www.ny.gov/sites/default/files/2026-09/GKH_ChildCareConstructionFund.jpg",
+        alt: "hildren gather around Governor Hochul in a classroom as she smiles.",
+        caption: "Governor Hochul greets students at an event marking progress towards Universal Child Care - Brooklyn, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/2026-09/GKH_DataCenterMoratorium.jpg",
+        alt: "Governor Hochul holds a signed document while three people applaud behind her. Governor Hochul is in an olive-green blazer, holding an official document as three standing adults applaud behind her. The U.S. and New York State flags are visible in the background.",
+        caption: "Governor Kathy Hochul signs Executive Order to create the nation’s first moratorium on new hyperscale data centers - Brooklyn, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/2026-09/GKH_LowerAutoInsurance.jpg",
+        alt: "Governor Hochul at a bill signing in an auto repair shop. Governor Hochul sits at a table inside of an auto repair garage, pointing towards a signed document. Workers in mechanic uniforms stand around them.",
+        caption: "Governor Hochul secures reforms to lower auto insurance premiums - New York, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/2026-09/GKH_SummerFoodAssistance.jpg",
+        alt: "Governor Hochul talks with a student in a classroom. Governor Hochul leans over a table in a bright yellow classroom to speak with seated student wearing matching purple t-shirts.",
+        caption: "Governor Hochul has signed nation-leading legislation to protect kids online - New York, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyAutumn_01%20%281%29.jpg?itok=kXn6HUKJ&focal_point_preview_value=50x50",
+        alt: "Fall foliage fills a park below the downtown Albany skyline under heavy clouds. Trees with fall foliage and the Empire State Plaza.",
+        caption: "Aerial view of Albany foliage – Albany, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide/public/2026-09/NYCBridge.JPG?itok=82jL4o9i&focal_point_preview_value=50x50",
+        alt: "The Brooklyn Bridge lit at dusk with the Lower Manhattan skyline. The Brooklyn Bridge is lit above the East River with the Lower Manhattan skyline behind it, including One World Trade Center. Building lights are seen reflecting on the water.",
+        caption: "Brooklyn Bridge – New York City, NY",
+        focalPoint: "right"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/Fall_River%20%281%29.jpg?h=b5f6a62e&itok=We2pEP8E&focal_point_preview_value=50x50",
+        alt: "A lighthouse on a stone pier with fall foliage and mountains behind it. A red brick lighthouse with a white tower stands on a stone base in the middle of a wide river. Behind it, fall foliage and layered mountains.",
+        caption: "Hudson-Athens Lighthouse – Hudson, NY",
+        focalPoint: "left"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/AlbanyCapitolBuildingFoliage.jpg?itok=JL5hVMgr&focal_point_preview_value=50x50",
+        alt: "Autumn foliage, a colorful flowerbed, and a statue of a man on a horse surround the New York State Capitol building. The New York State Capitol seen on a sunny autumn day with yellow and orange leaves lining trees and a statue of a man on a horse. A bed of flowers fills the front.",
+        caption: "New York State Capitol fall foliage – Albany, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/MontaukLighthouse_WestSide_morning.jpg?itok=M7GH0Esr&focal_point_preview_value=50x50",
+        alt: "The Montauk Lighthouse is lit at dawn on a grassy hill, under a purple sky. A white lighthouse and a house next to it are lit up on a grassy hill at dawn. The sky is purple and cloudy, with a little orange on the horizon, with rocks sitting in the front.",
+        caption: "Montauk Lighthouse during Sunrise – Montauk, NY",
+        focalPoint: "right"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/LakePlacidOlympicSkiJumpingComplex.jpg?itok=rBSMutgs&focal_point_preview_value=50x50",
+        alt: "A panoramic view showing trees in autumn and the lake placid ski jumping complex in the background.",
+        caption: "Lake Placid Olympic Ski Jumping Complex - Lake Placid, NY",
+        focalPoint: "left"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/FrederickDouglassSusanBAnthonyMemorialBridge.jpg?itok=Lw5ngsq6&focal_point_preview_value=50x50",
+        alt: "A steel arch bridge lit at dusk above the river, with the downtown Rochester, NY skyline behind it.",
+        caption: "Frederick Douglass and Susan B. Anthony Memorial Bridge -  Rochester, NY",
+        focalPoint: "center"
+    },
+    {
+        src: "https://www.ny.gov/sites/default/files/styles/hero_wide_tall/public/2026-09/ChittenangoFallsStatePark.jpg?itok=Yj9FkWpR&focal_point_preview_value=50x50",
+        alt: "A waterfall of several layers features prominently at the center with cliff faces and greenery, flowers, and trees on either side.",
+        caption: "Chittenango Falls State Park - Cazenovia, NY",
+        focalPoint: "center"
+    }
+];
+
+function loadRandomImage() {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const selectedImage = images[randomIndex];
+
+  const imageElement = document.getElementById('random-reload-image');
+  const captionElement = document.getElementById('random-reload-caption');
+
+  // Update the image and caption
+  imageElement.src = selectedImage.src;
+  imageElement.alt = selectedImage.alt;
+  captionElement.textContent = selectedImage.caption;
+
+  // Remove any previous focal-point classes
+  imageElement.classList.remove(
+    'object-left',
+    'object-center',
+    'object-right'
+  );
+
+  // Add the focal-point class based on the selected image
+  imageElement.classList.add(`object-${selectedImage.focalPoint}`);
+}
+
+// Load a random image when the page loads
+window.addEventListener('load', loadRandomImage);
+
+</script>
+
+
+
