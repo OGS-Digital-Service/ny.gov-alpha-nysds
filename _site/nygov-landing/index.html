@@ -203,20 +203,21 @@
                           name="searchButton"
                           class="w-full h-[50px] pl-[16px] pr-10 pt-0.5
                                 focus:outline-2 focus:outline-accent
-                                focus:outline-offset-1 
+                                focus:shadow-[inset_0px_0px_0_5px]
+                       
                                 border-2 border-theme 
                                 border-solid rounded-l-lg
-                                border-r-0
+                                
                                 !box-border
-                                bg-white
+                                bg-transparent
                               [&::-webkit-search-cancel-button]:!appearance-none"
                           placeholder="Search NY.gov"
                           aria-label="Search.NY.gov"/>
 
                       
-                      <button class="absolute right-16 md:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
+                      <button class="absolute right-[4.5rem] md:right-40 lg:right-36 top-1/4 -translate-y-1/2 hidden w-6 h-6 rounded-full 
                                       focus:outline-1 focus:outline-theme bg-gray-500 hover:bg-theme-strong
-                                    focus-visible:border-accent focus-visible:border-solid
+                                    focus-visible:border-accent focus-visible:border-solid focus-visible: shadow-[inset_0_0_0_2px_white]
                                     text-white items-center justify-center !box-border border border-transparent " 
                                     id="ny-hero-search-clear" 
                                     type="button" 
@@ -235,10 +236,10 @@
                                                 hover:bg-black
                                                 focus:bg-black
                                       
-                                                focus-visible:outline-2
-                                                focus-visible:outline-offset-2
+                                                focus-visible:!outline-2 focus-visible:outline-black
+                                               focus-visible:shadow-[inset_0_0_0_2px_#face00]
                                                 focus-visible:border-black
-                                                focus-visible:!outline-accent
+                                              
                                                 
                                                 hover:border-accent
                                                 border-2 
@@ -246,7 +247,7 @@
                                                 border-theme
                                                 rounded-r-lg 
                                                 !appearance-none">
-                      <span class="hidden md:block text-[18px] font-400 pt-0.5">Search</span>
+                      <span class="sr-only md:!not-sr-only md:block text-[18px] font-400 pt-0.5">Search</span>
                       <i class="fa-solid fa-magnifying-glass md:ml-[10px] text-[20px]" aria-hidden="true"></i>
                     </button>
                   </div> 
