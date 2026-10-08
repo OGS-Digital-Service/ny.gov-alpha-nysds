@@ -3,7 +3,7 @@ const images = [
   {
         src: "/sites/default/files/2026-09/GKH_ChildCareConstructionFund.jpg",
         alt: "hildren gather around Governor Hochul in a classroom as she smiles.",
-        caption: "Governor Hochul greets students at an event marking progress towards Universal Child Care – Brooklyn, NY",
+        caption: "Governor Hochul greets students at an event marking progress towards universal child care – Brooklyn, NY",
         focalPoint: "center"
     },
     {
