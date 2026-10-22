@@ -195,25 +195,25 @@ const images = [
   {
         src: "/sites/default/files/2026-09/GKH_ChildCareConstructionFund.jpg",
         alt: "hildren gather around Governor Hochul in a classroom as she smiles.",
-        caption: "Governor Hochul greets students at an event marking progress towards Universal Child Care – Brooklyn, NY",
+        caption: "<a href='https://www.governor.ny.gov'>Governor Hochul</a> greets students at an event marking progress towards universal child care – Brooklyn, NY",
         focalPoint: "center"
     },
     {
         src: "/sites/default/files/2026-09/GKH_DataCenterMoratorium.jpg",
         alt: "Governor Hochul holds a signed document while three people applaud behind her. Governor Hochul is in an olive-green blazer, holding an official document as three standing adults applaud behind her. The U.S. and New York State flags are visible in the background.",
-        caption: "Governor Hochul signs Executive Order to create the nation’s first moratorium on new hyperscale data centers – Brooklyn, NY",
+        caption: "<a href='https://www.governor.ny.gov'>Governor Hochul</a> signs Executive Order to create the nation’s first moratorium on new hyperscale data centers – Brooklyn, NY",
         focalPoint: "center"
     },
     {
         src: "/sites/default/files/2026-09/GKH_LowerAutoInsurance.jpg",
         alt: "Governor Hochul at a bill signing in an auto repair shop. Governor Hochul sits at a table inside of an auto repair garage, pointing towards a signed document. Workers in mechanic uniforms stand around them.",
-        caption: "Governor Hochul secures reforms to lower auto insurance premiums – New York, NY",
+        caption: "<a href='https://www.governor.ny.gov'>Governor Hochul</a> secures reforms to lower auto insurance premiums – New York, NY",
         focalPoint: "center"
     },
     {
         src: "/sites/default/files/2026-09/GKH_SummerFoodAssistance.jpg",
         alt: "Governor Hochul talks with a student in a classroom. Governor Hochul leans over a table in a bright yellow classroom to speak with seated student wearing matching purple t-shirts.",
-        caption: "Governor Hochul has signed nation-leading legislation to protect kids online – New York, NY",
+        caption: "<a href='https://www.governor.ny.gov'>Governor Hochul</a> has signed nation-leading legislation to protect kids online – New York, NY",
         focalPoint: "center"
     },
     {
@@ -267,7 +267,7 @@ const images = [
     {
         src: "/sites/default/files/styles/hero_wide_tall/public/2026-09/GKH_KeepingNewYorkersSafe.jpg?h=b5f6a62e&itok=MIRLdLjn&focal_point_preview_value=50x50",
         alt: "Governor Hochul stands at a podium with several law enforcement officers and staff",
-        caption: "Governor Hochul announces implementation of her new law to stand against ICE overreach – Albany, NY",
+        caption: "<a href='https://www.governor.ny.gov'>Governor Hochul</a> announces implementation of her new law to stand against ICE overreach – Albany, NY",
         focalPoint: "right"
     }
 ];
@@ -283,7 +283,14 @@ function loadRandomImage() {
   // Update the image and caption
   imageElement.src = selectedImage.src;
   imageElement.alt = selectedImage.alt;
-  captionElement.textContent = selectedImage.caption;
+
+
+   if (selectedImage.caption.includes("<")) {
+    captionElement.innerHTML = selectedImage.caption; // Use innerHTML to render HTML content
+   }
+    else {
+    captionElement.textContent = selectedImage.caption; // Use textContent for plain text
+   }
 
   // Remove any previous focal-point classes
   imageElement.classList.remove(
